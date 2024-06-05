@@ -1,4 +1,4 @@
-# _FAL_GDO731-Group15
+# _FAL_GDO731 - Group15
 
 ## Rapid ideation plan
 ### Team composition
