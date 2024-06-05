@@ -23,19 +23,19 @@ Our primary communication tool will be Slack for instant messaging and quick upd
 - **Jess Bradshaw**: 
 - **Sofía Orellano**: Monday to Friday, 9 AM - 7 PM (BST)
 
-## Group Schedule
+### Group Schedule
 - **Weekly Standup Meetings**: Every Wednesday at 6 PM (BST) via Teams
 - **Sprint Planning and Review**: Every XX at XX PM (BST) via Slack/ Teams
 - **Ad-hoc Meetings**: As needed, scheduled via Teams
 
-## Tools and Techniques
+### Tools and Techniques
 - **Code Repository**: GitHub
 - **Project Management**: Miro
 - **Communication**: Slack, Teams, Discord?
 - **Design**: Figma, Unity
 - **Development**: Visual Studio Code?
 
-## Performance Goals
+### Performance Goals
 Our performance goals are aligned with the project's milestones and deadlines, ensuring that we meet the requirements of the GDO731 module:
 1. **Initial Research and Planning**: 
 Create team charter
@@ -82,6 +82,6 @@ Upload the pitch video to Panopto and ensure it meets the submission guidelines.
 Prepare for the final presentation to the industry panel.
 Deadline: End of Week 12.
 
-## High-Level Explanation of Our Plan
+### High-Level Explanation of Our Plan
 We structured our rapid ideation plan to ensure clarity and efficiency in our workflow. Each section addresses a critical aspect of team collaboration, from understanding individual roles and schedules to defining our communication strategy and tools. By outlining these components early, we aim to establish a strong foundation for our project, facilitating smooth progress and adaptability as the team evolves. This document will be a live resource, regularly updated to reflect any changes in our plan, ensuring it remains relevant and useful throughout the project lifecycle.
 
