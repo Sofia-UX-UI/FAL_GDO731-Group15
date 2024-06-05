@@ -37,6 +37,7 @@ Our primary communication tool will be Slack for instant messaging and quick upd
 
 ### Performance Goals
 Our performance goals are aligned with the project's milestones and deadlines, ensuring that we meet the requirements of the GDO731 module:
+
 1. **Initial Research and Planning**: 
 Create team charter
 Identify and define the project scope and objectives.
