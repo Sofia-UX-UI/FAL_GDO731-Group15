@@ -1,6 +1,6 @@
 # FAL_GDO731 - Group15
 
-## Rapid ideation plan
+## Team charter
 ### Team composition
 Our transdisciplinary team is composed of the following members, from IGD (Indie Game Development) and UXD (User Experience Design), each bringing different skills, experience and perspectives to the team:
 
@@ -84,4 +84,6 @@ Deadline: End of Week 12.
 
 ### High-Level Explanation of Our Plan
 We structured our rapid ideation plan to ensure clarity and efficiency in our workflow. Each section addresses a critical aspect of team collaboration, from understanding individual roles and schedules to defining our communication strategy and tools. By outlining these components early, we aim to establish a strong foundation for our project, facilitating smooth progress and adaptability as the team evolves. This document will be a live resource, regularly updated to reflect any changes in our plan, ensuring it remains relevant and useful throughout the project lifecycle.
+
+## Rapid ideation plan
 
