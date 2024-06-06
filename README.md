@@ -24,7 +24,7 @@ Our primary communication tool will be Slack for instant messaging and quick upd
 - **Sofía Orellano**: Monday to Friday, 9 AM - 7 PM (BST)
 
 ### Group Schedule
-- **Weekly Standup Meetings**: Every Wednesday at 6 PM (BST) via Teams
+- **Weekly Standup Meetings**: Check-in app via Teams?
 - **Sprint Planning and Review**: Every XX at XX PM (BST) via Slack/ Teams
 - **Ad-hoc Meetings**: As needed, scheduled via Teams
 
