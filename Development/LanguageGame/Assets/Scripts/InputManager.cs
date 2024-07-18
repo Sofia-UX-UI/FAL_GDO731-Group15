@@ -9,6 +9,14 @@ public class InputManager : MonoBehaviour
     private Vector2 moveDirection = Vector2.zero;
     private bool interactPressed = false;
     private bool submitPressed = false; 
+    private bool pausePressed = false; 
+    
+    [Header ("Components")]
+    [SerializeField] private GameObject menu; 
+    [SerializeField] private GameObject firstSelected; 
+
+    [Header ("Player")]
+    [SerializeField] private CharacterController2D characterController;
 
     private static InputManager instance; 
     private void Awake()
@@ -18,6 +26,11 @@ public class InputManager : MonoBehaviour
             Debug.LogError("Found more than 1 Input Manager");
         }
         instance = this; 
+    }
+
+    private void Start()
+    {
+        menu.gameObject.SetActive(false); 
     }
 
     public static InputManager GetInstance()
@@ -66,6 +79,29 @@ public class InputManager : MonoBehaviour
         return moveDirection;
     }
 
+    public void PausePressed(InputAction.CallbackContext context)
+    {        
+        if(context.performed)
+        {
+            pausePressed = true;  
+            if(menu.gameObject.activeInHierarchy) //toggle off
+            {
+                    menu.gameObject.SetActive(false);
+                    //  characterController.EnableMovement(); 
+            }
+            else  //toggle on
+            {
+                menu.gameObject.SetActive(true);
+                //EventSystem.current.SetSelectedGameObject(firstSelected);
+            //  characterController.DisableMovement(); 
+            }        
+        }
+        else if (context.canceled)
+        {
+            pausePressed = false;
+        }
+    }
+
     public bool GetInteractPressed() 
     {
         bool result = interactPressed;
@@ -83,5 +119,12 @@ public class InputManager : MonoBehaviour
     public void RegisterSubmitPressed() 
     {
         submitPressed = false;
+    }
+
+    public bool GetPausePressed()
+    {
+        bool result = pausePressed; 
+        pausePressed = false;
+        return result;
     }
 }
