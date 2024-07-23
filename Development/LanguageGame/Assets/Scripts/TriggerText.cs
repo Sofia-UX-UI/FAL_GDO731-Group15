@@ -5,14 +5,17 @@ using UnityEngine;
 public class TriggerText : MonoBehaviour
 {
    [Header("item to disable")]
-   [SerializeField] private GameObject item; 
+   [SerializeField] private GameObject disableditem; 
+   [Header("item to enable")]
+   [SerializeField] private GameObject enableditem; 
     
     private bool playerInRange; 
    
  private void Awake()
    {
     playerInRange = false;
-    item.SetActive(true); 
+    disableditem.SetActive(true); 
+    enableditem.SetActive(false); 
    }
 
    private void OnTriggerEnter2D(Collider2D collider)
@@ -20,7 +23,8 @@ public class TriggerText : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             playerInRange = true;
-            item.SetActive(false); 
+            disableditem.SetActive(false);
+            enableditem.SetActive(true); 
         }
    }
 }
