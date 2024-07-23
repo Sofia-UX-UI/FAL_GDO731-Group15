@@ -6,6 +6,9 @@ using UnityEngine;
 public class DoorTrigger : MonoBehaviour
 {
    [SerializeField] private GameObject Popup;
+   [SerializeField] private string scene;
+   [Header("Moving Area")]
+    [SerializeField] private MusicTransition newArea; 
 
    private bool playerInRange;
 
@@ -19,13 +22,14 @@ public class DoorTrigger : MonoBehaviour
    {
     if (playerInRange && Input.GetKeyDown(KeyCode.E))
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(scene);
+        AudioManager.instance.SetBackgroundMusic(newArea); 
     }    
    }
 
     private void FixedUpdate()
     {
-        if (playerInRange = true)
+        if (playerInRange)
         {
             Popup.SetActive(true);
         }

@@ -2832,7 +2832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   area: 0
-  newArea: 1
+  newArea: 0
 --- !u!114 &1608607168
 MonoBehaviour:
   m_ObjectHideFlags: 0

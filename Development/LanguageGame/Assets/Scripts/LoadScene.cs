@@ -21,6 +21,7 @@ public class LoadScene : MonoBehaviour
       public void LoadLevel2()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Level_Two"); 
+        AudioManager.instance.SetBackgroundMusic(newArea); 
     }
        public void LoadMenu()
     {
