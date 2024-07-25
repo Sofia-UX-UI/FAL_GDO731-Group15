@@ -192,7 +192,7 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "submit",
                     "isComposite": false,
                     "isPartOfComposite": false
