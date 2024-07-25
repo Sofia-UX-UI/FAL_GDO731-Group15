@@ -13,6 +13,9 @@ public class DialogueManager : MonoBehaviour
     [Header ("Parameters")]
     [SerializeField] private float typingSpeed = 0.04f; //smaller number, faster it types
 
+    [Header("Load Globals JSON")]
+    [SerializeField] private TextAsset loadGlobalsJSON; 
+
     [Header ("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel; //to enable / disable dialogue Popup 
     [SerializeField] private GameObject continueIcon; 
@@ -20,7 +23,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI displayNameText; //to change Speaker name
     [SerializeField] private Animator portraitAnimator; //to change Speaker image
     private Animator layoutAnimator; 
-
 
     [Header ("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -38,7 +40,9 @@ public class DialogueManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout"; 
-    
+
+    private DialogueVariables dialogueVariables;
+     
     // ------------------- Functions 
     private void Awake()
     {
@@ -47,6 +51,8 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Found more than 1 Dialogue Manager");
         }
         instance = this; 
+
+        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
 
     public static DialogueManager GetInstance()
@@ -90,6 +96,8 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true; 
         dialoguePanel.SetActive(true); 
 
+        dialogueVariables.StartListening(currentStory); 
+
         //reset portrait, speaker name and layout 
         displayNameText.text = "???";
         portraitAnimator.Play("default"); 
@@ -98,8 +106,12 @@ public class DialogueManager : MonoBehaviour
         ContinueStory();  //grab next line of dialogue and continue forward. 
     }
 
-    public void ExitDialogueMode() // Exits out of Dialogue and closes down all visual pop ups. 
+    private IEnumerator ExitDialogueMode() // Exits out of Dialogue and closes down all visual pop ups. 
     {
+        yield return new WaitForSeconds(0.2f); 
+        
+        dialogueVariables.StopListening(currentStory); 
+
         dialogueIsPlaying = false; 
         dialoguePanel.SetActive(false);
         dialogueText.text = ""; //safe check to make sure its not displaying any linger text. 
@@ -121,18 +133,19 @@ public class DialogueManager : MonoBehaviour
         }
         else 
         {
-            ExitDialogueMode();  //if end of dialogue redirect to close things out
+            StartCoroutine(ExitDialogueMode());  //if end of dialogue redirect to close things out
         }
     }
 
     private IEnumerator DisplayLine(string line)
     {
-        dialogueText.text = " "; //empty dialogue text
+        dialogueText.text = ""; //empty dialogue text
         continueIcon.SetActive(false); //hide items until done typing 
         HideChoices(); 
 
         canContinueToNextLine = false; 
         bool isAddingRichTextTag = false; 
+
         foreach (char letter in line.ToCharArray())
         {
            if(InputManager.GetInstance().GetSubmitPressed())
@@ -240,5 +253,16 @@ public class DialogueManager : MonoBehaviour
             currentStory.ChooseChoiceIndex(choiceIndex);
            //ContinueStory(); 
         }
+    }
+
+   public Ink.Runtime.Object GetVariableState(string variableName) 
+    {
+        Ink.Runtime.Object variableValue = null;
+        dialogueVariables.variables.TryGetValue(variableName, out variableValue);
+        if (variableValue == null) 
+        {
+            Debug.LogWarning("Ink Variable was found to be null: " + variableName);
+        }
+        return variableValue;
     }
 }
