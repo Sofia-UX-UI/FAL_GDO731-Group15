@@ -6,11 +6,16 @@ using Ink.Runtime;
 using UnityEngine.EventSystems; 
 
 // Code inspired by https://youtu.be/vY0Sk93YUhA?si=D1BYUhYjx0vQ22t7 's tutorial 
+//Code inspired by https://youtu.be/tVrxeUIEV9E?si=5G0IFErsbNYxoyQk 's tutorial 
 
 public class DialogueManager : MonoBehaviour
 {
+    [Header ("Parameters")]
+    [SerializeField] private float typingSpeed = 0.04f; //smaller number, faster it types
+
     [Header ("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel; //to enable / disable dialogue Popup 
+    [SerializeField] private GameObject continueIcon; 
     [SerializeField] private TextMeshProUGUI dialogueText; //to change dialogue text 
     [SerializeField] private TextMeshProUGUI displayNameText; //to change Speaker name
     [SerializeField] private Animator portraitAnimator; //to change Speaker image
@@ -24,6 +29,9 @@ public class DialogueManager : MonoBehaviour
     
     private Story currentStory; //track which story 
     public bool dialogueIsPlaying {get; private set;} //Track to see if dialogue is actively playing or not. 
+    
+    private bool canContinueToNextLine = false; 
+    private Coroutine displayLineCoroutine; 
 
     private static DialogueManager instance; 
 
@@ -70,7 +78,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (InputManager.GetInstance().GetSubmitPressed())    //if space or continue is pressed it continues to the next line of dialogue 
+        if (canContinueToNextLine && currentStory.currentChoices.Count ==0 && InputManager.GetInstance().GetSubmitPressed())    //if space or continue is pressed it continues to the next line of dialogue 
         {
             ContinueStory(); 
         }
@@ -101,8 +109,13 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            dialogueText.text = currentStory.Continue(); //will pull next line of dialogue 
-            DisplayChoices(); 
+            //dialogueText.text = currentStory.Continue(); //will pull next line of dialogue --- replaced with typing below 
+            if (displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine); 
+            }
+            displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
+            
             //Dealing with tags 
             HandleTags(currentStory.currentTags); 
         }
@@ -110,6 +123,41 @@ public class DialogueManager : MonoBehaviour
         {
             ExitDialogueMode();  //if end of dialogue redirect to close things out
         }
+    }
+
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueText.text = " "; //empty dialogue text
+        continueIcon.SetActive(false); //hide items until done typing 
+        HideChoices(); 
+
+        canContinueToNextLine = false; 
+        bool isAddingRichTextTag = false; 
+        foreach (char letter in line.ToCharArray())
+        {
+           if(InputManager.GetInstance().GetSubmitPressed())
+           {
+                dialogueText.text = line; 
+                break; 
+           }
+           if (letter == '<' || isAddingRichTextTag)
+           {
+                isAddingRichTextTag = true; 
+                dialogueText.text += letter; 
+                if (letter == '>')
+                {
+                    isAddingRichTextTag = false; 
+                }
+           }
+           else
+           {
+                dialogueText.text += letter; 
+                yield return new WaitForSeconds(typingSpeed); 
+           }
+        }
+        canContinueToNextLine = true; 
+        continueIcon.SetActive(true);
+        DisplayChoices(); 
     }
 
     private void HandleTags(List<string> currentTags)
@@ -170,6 +218,13 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(SelectFirstchoice()); 
     }
 
+    private void HideChoices()
+    {
+        foreach (GameObject choiceButton in choices)
+        {
+            choiceButton.SetActive(false); 
+        }
+    }
     private IEnumerator SelectFirstchoice()
     {
         //Grabs the first choice first and waits. 
@@ -180,7 +235,10 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
-        currentStory.ChooseChoiceIndex(choiceIndex);
-
+        if (canContinueToNextLine)
+        {
+            currentStory.ChooseChoiceIndex(choiceIndex);
+           //ContinueStory(); 
+        }
     }
 }
