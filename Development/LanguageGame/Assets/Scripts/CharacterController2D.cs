@@ -12,8 +12,9 @@ public class CharacterController2D : MonoBehaviour
     // components attached to player
     private BoxCollider2D coll;
     private Rigidbody2D rb;
+    
 
-    // other
+    // other 
    // private bool isGrounded = false;
 
     private void Awake()
@@ -30,7 +31,10 @@ public class CharacterController2D : MonoBehaviour
         {
             return;
         }
-
+       // if (NotebookTrigger.notebookCheck)   //checks to see if dialogue is running and disabled ability to move around. 
+       // {
+       //     return;
+       // }
     
 
         HandleHorizontalMovement();
