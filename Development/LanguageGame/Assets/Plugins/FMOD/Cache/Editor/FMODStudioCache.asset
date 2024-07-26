@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7134693840117657965
+--- !u!114 &-7600881990096271237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,65 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Backgrounds.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: FMODProject/AudioForGame/Build/Desktop/Backgrounds.bank
-  Name: Backgrounds
-  StudioPath: bank:/Backgrounds
-  lastModified: 638570029368777120
+  Path: FMODProject/AudioForGame/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638575238657947651
   FileSizes:
   - Name: Desktop
-    Value: 1467808
+    Value: 1132
   Exists: 1
---- !u!114 &-2096711071655948783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: FMODProject/AudioForGame/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638570029368787171
-  FileSizes:
-  - Name: Desktop
-    Value: 24032
-  Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 7662267140538995752}
-  - {fileID: 500642030412641848}
-  - {fileID: -2096711071655948783}
-  - {fileID: -7134693840117657965}
-  EditorEvents:
-  - {fileID: 170971333479388738}
-  - {fileID: 1863508979822678092}
-  - {fileID: 8250542371058397937}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 500642030412641848}
-  StringsBanks:
-  - {fileID: 7662267140538995752}
-  cacheTime: 638570029368787171
-  cacheVersion: 131619
---- !u!114 &170971333479388738
+--- !u!114 &-7581084011976274319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,7 +39,7 @@ MonoBehaviour:
     Data3: -1479787106
     Data4: -1905544896
   Banks:
-  - {fileID: -2096711071655948783}
+  - {fileID: 8287515805588132541}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -95,7 +47,110 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
---- !u!114 &500642030412641848
+--- !u!114 &-7227234856393389230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Backgrounds.bank
+  m_EditorClassIdentifier: 
+  Path: FMODProject/AudioForGame/Build/Desktop/Backgrounds.bank
+  Name: Backgrounds
+  StudioPath: bank:/Backgrounds
+  lastModified: 638575238657937566
+  FileSizes:
+  - Name: Desktop
+    Value: 1467808
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -7600881990096271237}
+  - {fileID: -7227234856393389230}
+  - {fileID: 4953537954996498429}
+  - {fileID: 8287515805588132541}
+  EditorEvents:
+  - {fileID: 2173117182176265606}
+  - {fileID: -7581084011976274319}
+  - {fileID: 2550231260039928289}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 4953537954996498429}
+  StringsBanks:
+  - {fileID: -7600881990096271237}
+  cacheTime: 638575238657947651
+  cacheVersion: 131619
+--- !u!114 &2173117182176265606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Backgounds/BackgroundMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Backgounds/BackgroundMusic
+  Guid:
+    Data1: 1145937016
+    Data2: 1225277279
+    Data3: 1799284623
+    Data4: -1620987505
+  Banks:
+  - {fileID: -7227234856393389230}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7381945564897823379}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2550231260039928289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Continue
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Continue
+  Guid:
+    Data1: 654676593
+    Data2: 1162318149
+    Data3: -1775384930
+    Data4: -282158562
+  Banks:
+  - {fileID: 8287515805588132541}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4953537954996498429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,12 +165,12 @@ MonoBehaviour:
   Path: FMODProject/AudioForGame/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638570029368777120
+  lastModified: 638575238657947651
   FileSizes:
   - Name: Desktop
     Value: 1486
   Exists: 1
---- !u!114 &1500452754560821128
+--- !u!114 &7381945564897823379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,34 +196,7 @@ MonoBehaviour:
   - Main
   - Spain
   Exists: 1
---- !u!114 &1863508979822678092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Continue
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Continue
-  Guid:
-    Data1: 654676593
-    Data2: 1162318149
-    Data3: -1775384930
-    Data4: -282158562
-  Banks:
-  - {fileID: -2096711071655948783}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7662267140538995752
+--- !u!114 &8287515805588132541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,41 +206,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
-  Path: FMODProject/AudioForGame/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638570029368777120
+  Path: FMODProject/AudioForGame/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638575238657947651
   FileSizes:
   - Name: Desktop
-    Value: 1132
+    Value: 24032
   Exists: 1
---- !u!114 &8250542371058397937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Backgounds/BackgroundMusic
-  m_EditorClassIdentifier: 
-  Path: event:/Backgounds/BackgroundMusic
-  Guid:
-    Data1: 1145937016
-    Data2: 1225277279
-    Data3: 1799284623
-    Data4: -1620987505
-  Banks:
-  - {fileID: -7134693840117657965}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 1500452754560821128}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0

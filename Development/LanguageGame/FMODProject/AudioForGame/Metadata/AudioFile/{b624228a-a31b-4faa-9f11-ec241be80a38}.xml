@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b624228a-a31b-4faa-9f11-ec241be80a38}">
+		<property name="assetPath">
+			<value>SpanishMusic_tumbao-rumba-Julia_Music.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>40.019591836734691</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{dc06c680-7a0b-49d3-a788-42bd8012e26e}</destination>
+		</relationship>
+	</object>
+</objects>

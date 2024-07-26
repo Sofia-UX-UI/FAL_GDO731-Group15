@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e13b137f-4bcc-46d3-84cb-063f56a9a376}">
+		<property name="assetPath">
+			<value>IntroMusic_ordinary-loop-minimal-piano-HarumachiMusic.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>85.031999999999996</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{dc06c680-7a0b-49d3-a788-42bd8012e26e}</destination>
+		</relationship>
+	</object>
+</objects>
