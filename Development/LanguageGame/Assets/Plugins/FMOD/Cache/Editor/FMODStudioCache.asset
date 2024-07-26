@@ -16,11 +16,64 @@ MonoBehaviour:
   Name: Master.strings
   StudioPath: bank:/Master.strings
   lastModified: 638575238657947651
+  Path: FMODProject/AudioForGame/Build/Desktop/Backgrounds.bank
+  Name: Backgrounds
+  StudioPath: bank:/Backgrounds
+  lastModified: 638575003105020778
   FileSizes:
   - Name: Desktop
     Value: 1132
   Exists: 1
 --- !u!114 &-7581084011976274319
+--- !u!114 &-2096711071655948783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: FMODProject/AudioForGame/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638575003105121121
+  FileSizes:
+  - Name: Desktop
+    Value: 24032
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 7662267140538995752}
+  - {fileID: 500642030412641848}
+  - {fileID: -2096711071655948783}
+  - {fileID: -7134693840117657965}
+  EditorEvents:
+  - {fileID: 170971333479388738}
+  - {fileID: 1863508979822678092}
+  - {fileID: 8250542371058397937}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 500642030412641848}
+  StringsBanks:
+  - {fileID: 7662267140538995752}
+  cacheTime: 638575003105121121
+  cacheVersion: 131619
+--- !u!114 &170971333479388738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,6 +265,10 @@ MonoBehaviour:
   Name: SFX
   StudioPath: bank:/SFX
   lastModified: 638575238657947651
+  Path: FMODProject/AudioForGame/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638575003105091017
   FileSizes:
   - Name: Desktop
     Value: 24032

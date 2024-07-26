@@ -7,13 +7,10 @@ public class TriggerText : MonoBehaviour
    [Header("item to disable")]
    [SerializeField] private GameObject disableditem; 
    [Header("item to enable")]
-   [SerializeField] private GameObject enableditem; 
-    
-    private bool playerInRange; 
+   [SerializeField] private GameObject enableditem;  
    
  private void Awake()
    {
-    playerInRange = false;
     disableditem.SetActive(true); 
     enableditem.SetActive(false); 
    }
@@ -22,7 +19,6 @@ public class TriggerText : MonoBehaviour
    {
         if (collider.gameObject.tag == "Player")
         {
-            playerInRange = true;
             disableditem.SetActive(false);
             enableditem.SetActive(true); 
         }
