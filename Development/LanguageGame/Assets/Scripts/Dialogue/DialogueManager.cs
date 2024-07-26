@@ -149,7 +149,7 @@ public class DialogueManager : MonoBehaviour
         List<Choice> currentChoices = currentStory.currentChoices; 
         if (currentChoices.Count > choices.Length)
         {
-            Debug.LogError("More choices were given than UI suppot. # of choices given:" + currentChoices.Count); 
+            Debug.LogError("More choices were given than UI support. # of choices given:" + currentChoices.Count); 
         }
         int index = 0; 
 
