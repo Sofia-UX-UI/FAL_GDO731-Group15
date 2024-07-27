@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: 58ebcaabda1e23348a1f1a9e64fa75c1
   - enabled: 1
     path: Assets/Scenes/4_Street.unity
-    guid: 9614f4180488edd46bd73feb4d44e494
+    guid: ea26e47c7b75ce94f99ff9d15da2f251
   - enabled: 1
     path: Assets/Scenes/5_CoffeeShop.unity
     guid: adc5a33d1b6eabe4c96bc0211c108407

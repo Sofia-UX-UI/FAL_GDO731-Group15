@@ -619,6 +619,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 692187994045289115, guid: 9681ca583ffc1964ca8a15222a21ddc5,
+        type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 9949352d636ab4c46b6fc7227fffa0b4, type: 3}
     - target: {fileID: 1501876139897516160, guid: 9681ca583ffc1964ca8a15222a21ddc5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -672,7 +677,7 @@ PrefabInstance:
     - target: {fileID: 2019048567036967482, guid: 9681ca583ffc1964ca8a15222a21ddc5,
         type: 3}
       propertyPath: m_Name
-      value: NPC_FacingRight
+      value: Barista
       objectReference: {fileID: 0}
     - target: {fileID: 6610709945462983609, guid: 9681ca583ffc1964ca8a15222a21ddc5,
         type: 3}
