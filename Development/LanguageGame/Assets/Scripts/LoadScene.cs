@@ -15,7 +15,7 @@ public class LoadScene : MonoBehaviour
         AudioManager.instance.PlayOneShot(FMODEvents.instance.ContinueButton, this.transform.position);
         AudioManager.instance.SetBackgroundMusic(newArea); 
         Debug.Log(newArea); 
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Level_One"); 
+        UnityEngine.SceneManagement.SceneManager.LoadScene("1_Airport"); 
     }
 
       public void LoadLevel2()
