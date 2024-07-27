@@ -2,3 +2,9 @@
 Development/LanguageGame/UserSettings/Layouts/default-2022.dwlt
 Development/LanguageGame/UserSettings/EditorUserSettings.asset
 /Development/LanguageGame/UserSettings
+Development/LanguageGame/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
+Development/LanguageGame/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist
+Development/LanguageGame/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist
+Development/LanguageGame/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist
+Development/LanguageGame/fmod_editor.log
+Development/LanguageGame/ProjectSettings/EditorBuildSettings.asset
