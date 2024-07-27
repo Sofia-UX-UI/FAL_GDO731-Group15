@@ -10,8 +10,6 @@ INCLUDE globals.ink
 ->train
 * [Train]
 ->train
-* [Taxi]
-->train
 * [Ridesharing]
 ->train
 === train ===
