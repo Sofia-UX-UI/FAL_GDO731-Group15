@@ -676,20 +676,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c707093e85c3ac64ab3fd5a13977b650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.04
-  loadGlobalsJSON: {fileID: 4900000, guid: 9bb9239e242fae34a8d015d6d140fab6, type: 3}
   dialoguePanel: {fileID: 916063250}
-  continueIcon: {fileID: 940649054}
   dialogueText: {fileID: 571827562}
   displayNameText: {fileID: 615201193}
   portraitAnimator: {fileID: 990214192}
   choices: []
---- !u!1 &288825229 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2911677355242534291, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
-    type: 3}
-  m_PrefabInstance: {fileID: 884196189}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &359064374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,7 +1128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c69781e6724064f83ccca4f876c842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 288825229}
+  menu: {fileID: 0}
   firstSelected: {fileID: 0}
   characterController: {fileID: 1266239576}
 --- !u!114 &603945718
@@ -1843,12 +1834,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 884196189}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &940649054 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4613862513541257710, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
-    type: 3}
-  m_PrefabInstance: {fileID: 884196189}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &990214192 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1507467122525539222, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
@@ -2282,7 +2267,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 288825229}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2959,6 +2944,11 @@ PrefabInstance:
     - target: {fileID: 5285142218025001139, guid: 88079b66c5152b7409d6de372abc1475,
         type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360973428529876746, guid: 88079b66c5152b7409d6de372abc1475,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7835005243790723166, guid: 88079b66c5152b7409d6de372abc1475,
@@ -3760,7 +3750,7 @@ SpriteRenderer:
   m_Size: {x: 14.77, y: 9.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1821070374
