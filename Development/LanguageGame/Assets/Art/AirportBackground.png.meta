@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Development/LanguageGame/Assets/Art/world-map-pixel-art.png.meta
-guid: 12c322caedca3fa4ea618dac3a31c946
-========
-guid: 5f8c1f1b9bc2b0549a858b4a1e1df8e7
->>>>>>>> JessNew:Development/LanguageGame/Assets/Art/Character/GreenBird.png.meta
+guid: d2b2963694e276c4a9e29153d9f1694e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -38,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -52,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1

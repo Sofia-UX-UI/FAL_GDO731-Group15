@@ -13,6 +13,9 @@ public class CharacterController2D : MonoBehaviour
     private BoxCollider2D coll;
     private Rigidbody2D rb;
     
+    private Animator animator; 
+    private bool MoveRight = false; 
+     private bool MoveLeft = false; 
 
     // other 
    // private bool isGrounded = false;
@@ -23,6 +26,7 @@ public class CharacterController2D : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         rb.gravityScale = gravityScale;
+        animator = GetComponent<Animator>(); 
     }
 
     private void FixedUpdate()
@@ -46,6 +50,14 @@ public class CharacterController2D : MonoBehaviour
     {
         Vector2 moveDirection = InputManager.GetInstance().GetMoveDirection();
         rb.velocity = new Vector2(moveDirection.x * runSpeed, rb.velocity.y);
+        AnimateWalk(moveDirection); 
     }
 
+    public void AnimateWalk(Vector2 moveDirection)
+    {
+        MoveRight = (moveDirection.x > 0.1f) ? true : false; 
+        animator.SetBool("WalkingRight", MoveRight); 
+        MoveLeft = (moveDirection.x < -0.1f) ? true : false; 
+        animator.SetBool("WalkingLeft", MoveLeft); 
+    }
 }
