@@ -11,7 +11,7 @@ using UnityEngine.EventSystems;
 public class DialogueManager : MonoBehaviour
 {
     [Header ("Parameters")]
-    [SerializeField] private float typingSpeed = 0.04f; //smaller number, faster it types
+    [SerializeField] public float typingSpeed = 0.04f; //smaller number, faster it types
 
     [Header("Load Globals JSON")]
     [SerializeField] private TextAsset loadGlobalsJSON; 
@@ -35,7 +35,7 @@ public class DialogueManager : MonoBehaviour
     private bool canContinueToNextLine = false; 
     private Coroutine displayLineCoroutine; 
 
-    private static DialogueManager instance; 
+    public static DialogueManager instance {get; private set;} 
 
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
