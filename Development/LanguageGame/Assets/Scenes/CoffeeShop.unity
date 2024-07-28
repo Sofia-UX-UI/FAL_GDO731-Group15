@@ -1199,6 +1199,22 @@ PrefabInstance:
       propertyPath: scene
       value: OutsideScene
       objectReference: {fileID: 0}
+    - target: {fileID: 2161122278757035884, guid: 237fccd48139b4946b3eea032d75fb10,
+        type: 3}
+      propertyPath: playerStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: ab3e5b69574a8e4479c57d8ebe66bd0f,
+        type: 2}
+    - target: {fileID: 2161122278757035884, guid: 237fccd48139b4946b3eea032d75fb10,
+        type: 3}
+      propertyPath: playerPosition.x
+      value: 17.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161122278757035884, guid: 237fccd48139b4946b3eea032d75fb10,
+        type: 3}
+      propertyPath: playerPosition.y
+      value: -3.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4045370539887930287, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
       propertyPath: m_Name
@@ -1519,6 +1535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 6
   gravityScale: 20
+  startingPosition: {fileID: 11400000, guid: ab3e5b69574a8e4479c57d8ebe66bd0f, type: 2}
 --- !u!1 &1558233547
 GameObject:
   m_ObjectHideFlags: 0

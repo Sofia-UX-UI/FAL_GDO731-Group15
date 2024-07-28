@@ -11,6 +11,8 @@ public class DoorTrigger : MonoBehaviour
     [SerializeField] private MusicTransition newArea; 
 
    private bool playerInRange;
+   public Vector2 playerPosition;
+   public VectorValue playerStorage;
 
    private void Awake()
    {
@@ -22,6 +24,7 @@ public class DoorTrigger : MonoBehaviour
    {
     if (playerInRange && Input.GetKeyDown(KeyCode.E))
     {
+        playerStorage.initialValue = playerPosition;
         SceneManager.LoadScene(scene);
         AudioManager.instance.SetBackgroundMusic(newArea); 
     }    

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 46631189}
   - component: {fileID: 46631192}
   - component: {fileID: 46631193}
+  - component: {fileID: 46631194}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -294,6 +295,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.68, y: 2.1796741}
   m_EdgeRadius: 0
+--- !u!114 &46631194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46631188}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8af9b195ebf304d8aa7ba6a7b5efaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runSpeed: 6
+  gravityScale: 20
+  startingPosition: {fileID: 0}
 --- !u!1 &436180281
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +529,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 5.17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -538,11 +554,10 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.98, y: -3.23, z: -10.0528}
+  m_LocalPosition: {x: 2.98, y: -0.23139977, z: -10.0528}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1913000447}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
@@ -756,6 +771,12 @@ PrefabInstance:
       propertyPath: scene
       value: CoffeeShop
       objectReference: {fileID: 0}
+    - target: {fileID: 2161122278757035884, guid: 237fccd48139b4946b3eea032d75fb10,
+        type: 3}
+      propertyPath: playerStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: ab3e5b69574a8e4479c57d8ebe66bd0f,
+        type: 2}
     - target: {fileID: 4045370539887930287, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
       propertyPath: m_Name
@@ -980,10 +1001,6 @@ PrefabInstance:
 --- !u!1001 &1511754407727010219
 PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685456502}
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
@@ -1061,3 +1078,4 @@ SceneRoots:
   - {fileID: 1511754407727010219}
   - {fileID: 1483086739}
   - {fileID: 46631191}
+  - {fileID: 519420032}

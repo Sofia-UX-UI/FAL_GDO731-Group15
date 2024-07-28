@@ -8,6 +8,7 @@ public class CharacterController2D : MonoBehaviour
  [Header("Movement Params")]
     public float runSpeed = 6.0f;
     public float gravityScale = 20.0f;
+    public VectorValue startingPosition;
 
     // components attached to player
     private BoxCollider2D coll;
@@ -17,7 +18,11 @@ public class CharacterController2D : MonoBehaviour
     // other 
    // private bool isGrounded = false;
 
-    private void Awake()
+    void start ()
+    {
+        transform.position = startingPosition.initialValue;
+    }
+        void Awake()
     {
         coll = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
