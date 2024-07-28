@@ -3,7 +3,7 @@
 "Hola! Welcome to Blackbird Coffee! What can I get for you today?"#speaker:Barista #layout:left
 ->start
 === start === 
-What should I order?"
+What should I order?"#speaker:Player #layout:left
 * [Latte, please!]
 ->latte
 * [Espresso, please!]
