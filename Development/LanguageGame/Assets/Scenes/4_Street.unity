@@ -1459,6 +1459,7 @@ MonoBehaviour:
   continueIcon: {fileID: 92827408}
   dialogueText: {fileID: 670092623}
   displayNameText: {fileID: 2021279851}
+  speakerWashi: {fileID: 7042314276222545973}
   portraitAnimator: {fileID: 957604614}
   choices:
   - {fileID: 372261181}
@@ -2347,6 +2348,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1245393585}
+    - target: {fileID: 8859736970821247405, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1245393585}
+    - target: {fileID: 8859736970821247405, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859736970821247405, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859736970821247405, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8878244334930180845, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2453,12 +2474,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4, type: 3}
+--- !u!114 &7042314276222545973 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9059392071322771060, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7042314276222545972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 7042314276222545972}
   - {fileID: 1018015800}
+  - {fileID: 7042314276222545972}
   - {fileID: 809033638}
   - {fileID: 179804117}
   - {fileID: 1524902731}

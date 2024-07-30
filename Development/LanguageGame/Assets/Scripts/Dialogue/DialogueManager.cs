@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro; 
 using Ink.Runtime; 
-using UnityEngine.EventSystems; 
+using UnityEngine.EventSystems;
+using UnityEngine.UI; 
 
 // Code inspired by https://youtu.be/vY0Sk93YUhA?si=D1BYUhYjx0vQ22t7 's tutorial 
 //Code inspired by https://youtu.be/tVrxeUIEV9E?si=5G0IFErsbNYxoyQk 's tutorial 
@@ -21,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject continueIcon; 
     [SerializeField] private TextMeshProUGUI dialogueText; //to change dialogue text 
     [SerializeField] private TextMeshProUGUI displayNameText; //to change Speaker name
+    [SerializeField] private Image speakerWashi; 
     [SerializeField] private Animator portraitAnimator; //to change Speaker image
     private Animator layoutAnimator; 
 
@@ -50,7 +52,9 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.LogWarning("Found more than 1 Dialogue Manager");
         }
-        instance = this; 
+        instance = this;
+
+        typingSpeed = AudioManager.instance.typingSpeed;  
 
         dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
@@ -89,7 +93,10 @@ public class DialogueManager : MonoBehaviour
             ContinueStory(); 
         }
     }
-
+    public void UpdateSpeed()
+    {
+        typingSpeed = AudioManager.instance.typingSpeed;
+    }
     public void EnterDialogueMode (TextAsset inkJSON) //starts up visual dialogue system 
     {
         currentStory = new Story(inkJSON.text); 
@@ -191,6 +198,25 @@ public class DialogueManager : MonoBehaviour
             {
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
+                    if (displayNameText.text == "Player")
+                    { 
+                        speakerWashi.color = new Color32(255, 139, 212, 255); 
+                    }
+                    else if (displayNameText.text == "Travel Agent")
+                    {
+                        speakerWashi.color = new Color32(175, 85, 60, 255);
+                    }
+                    else if (displayNameText.text == "Security")
+                    {
+                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                    }
+                    else if (displayNameText.text == "Barista")
+                    {
+                        speakerWashi.color = new Color32(192, 207, 68, 255);
+                    }
+                    else {
+                        speakerWashi.color = new Color32(0, 0, 0, 255);
+                    }
                     break;
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue); 

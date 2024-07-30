@@ -3,7 +3,7 @@ INCLUDE globals.ink
 === start ===
     "Hi, I'd like to book the next flight avaliable." #speaker:Player #layout:left
     "Oh? We have a number that you could board is there somewhere specific?" #speaker:Travel Agent #layout:right
-    How should I reply? 
+    How should I reply? #speaker:Player #layout:left
 * [Cheapest]
 ->cheapest
 * [Anywhere]
@@ -36,7 +36,7 @@ INCLUDE globals.ink
     -> END
     === alreadyPickedUp === 
     "Hello again, is there something I can help you with?" #speaker:Travel Agent #layout:right
-    How should I reply?
+    How should I reply? #speaker:Player #layout:left
 * [Where do I go next?]
     "I forgot where do I go next?" #speaker:Player #layout:left
     "Please head through security. Boarding at <color=\#5B81FF>Gate 14</color>." #speaker:Travel Agent #layout:right
