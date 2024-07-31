@@ -21,7 +21,10 @@ public class AudioManager : MonoBehaviour
    // [Range(0, 1)]
     //public float ambienceVolume = 1; 
     [Range(0, 1)]
-    public float SFXVolume = 1; 
+    public float SFXVolume = 1;
+    [Header("TypingSpeed")]
+    [Range(-100, 100)]
+    public float typingSpeed = 0.04f;
 
     private Bus masterBus; 
     private Bus musicBus; 

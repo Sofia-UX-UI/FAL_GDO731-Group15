@@ -1,9 +1,9 @@
 ->Introduction
 === Introduction ===
-"Hola! Welcome to Blackbird Coffee! What can I get for you today?"#speaker:Barista #layout:left
+"Hola, ¿qué te apetece tomar?"<br><color=\#666666><i>Hi, what do you feel like having?</color></i>#speaker:Barista #layout:left
 ->start
 === start === 
-What should I order?"
+What should I order?"#speaker:Player #layout:left
 * [Latte, please!]
 ->latte
 * [Espresso, please!]

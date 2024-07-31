@@ -3,19 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro; 
 using Ink.Runtime; 
-using UnityEngine.EventSystems; 
+using UnityEngine.EventSystems;
+using UnityEngine.UI; 
 
 // Code inspired by https://youtu.be/vY0Sk93YUhA?si=D1BYUhYjx0vQ22t7 's tutorial 
+//Code inspired by https://youtu.be/tVrxeUIEV9E?si=5G0IFErsbNYxoyQk 's tutorial 
 
 public class DialogueManager : MonoBehaviour
 {
+    [Header ("Parameters")]
+    [SerializeField] public float typingSpeed = 0.04f; //smaller number, faster it types
+
+    [Header("Load Globals JSON")]
+    [SerializeField] private TextAsset loadGlobalsJSON; 
+
     [Header ("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel; //to enable / disable dialogue Popup 
+    [SerializeField] private GameObject continueIcon; 
     [SerializeField] private TextMeshProUGUI dialogueText; //to change dialogue text 
     [SerializeField] private TextMeshProUGUI displayNameText; //to change Speaker name
+    [SerializeField] private Image speakerWashi; 
     [SerializeField] private Animator portraitAnimator; //to change Speaker image
     private Animator layoutAnimator; 
-
 
     [Header ("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -24,13 +33,18 @@ public class DialogueManager : MonoBehaviour
     
     private Story currentStory; //track which story 
     public bool dialogueIsPlaying {get; private set;} //Track to see if dialogue is actively playing or not. 
+    
+    private bool canContinueToNextLine = false; 
+    private Coroutine displayLineCoroutine; 
 
-    private static DialogueManager instance; 
+    public static DialogueManager instance {get; private set;} 
 
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout"; 
-    
+
+    private DialogueVariables dialogueVariables;
+     
     // ------------------- Functions 
     private void Awake()
     {
@@ -38,7 +52,11 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.LogWarning("Found more than 1 Dialogue Manager");
         }
-        instance = this; 
+        instance = this;
+
+        typingSpeed = AudioManager.instance.typingSpeed;  
+
+        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
 
     public static DialogueManager GetInstance()
@@ -70,17 +88,22 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (InputManager.GetInstance().GetSubmitPressed())    //if space or continue is pressed it continues to the next line of dialogue 
+        if (canContinueToNextLine && currentStory.currentChoices.Count ==0 && InputManager.GetInstance().GetSubmitPressed())    //if space or continue is pressed it continues to the next line of dialogue 
         {
             ContinueStory(); 
         }
     }
-
+    public void UpdateSpeed()
+    {
+        typingSpeed = AudioManager.instance.typingSpeed;
+    }
     public void EnterDialogueMode (TextAsset inkJSON) //starts up visual dialogue system 
     {
         currentStory = new Story(inkJSON.text); 
         dialogueIsPlaying = true; 
         dialoguePanel.SetActive(true); 
+
+        dialogueVariables.StartListening(currentStory); 
 
         //reset portrait, speaker name and layout 
         displayNameText.text = "???";
@@ -90,8 +113,12 @@ public class DialogueManager : MonoBehaviour
         ContinueStory();  //grab next line of dialogue and continue forward. 
     }
 
-    public void ExitDialogueMode() // Exits out of Dialogue and closes down all visual pop ups. 
+    private IEnumerator ExitDialogueMode() // Exits out of Dialogue and closes down all visual pop ups. 
     {
+        yield return new WaitForSeconds(0.2f); 
+        
+        dialogueVariables.StopListening(currentStory); 
+
         dialogueIsPlaying = false; 
         dialoguePanel.SetActive(false);
         dialogueText.text = ""; //safe check to make sure its not displaying any linger text. 
@@ -101,15 +128,56 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            dialogueText.text = currentStory.Continue(); //will pull next line of dialogue 
-            DisplayChoices(); 
+            //dialogueText.text = currentStory.Continue(); //will pull next line of dialogue --- replaced with typing below 
+            if (displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine); 
+            }
+            displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
+            
             //Dealing with tags 
             HandleTags(currentStory.currentTags); 
         }
         else 
         {
-            ExitDialogueMode();  //if end of dialogue redirect to close things out
+            StartCoroutine(ExitDialogueMode());  //if end of dialogue redirect to close things out
         }
+    }
+
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueText.text = ""; //empty dialogue text
+        continueIcon.SetActive(false); //hide items until done typing 
+        HideChoices(); 
+
+        canContinueToNextLine = false; 
+        bool isAddingRichTextTag = false; 
+
+        foreach (char letter in line.ToCharArray())
+        {
+           if(InputManager.GetInstance().GetSubmitPressed())
+           {
+                dialogueText.text = line; 
+                break; 
+           }
+           if (letter == '<' || isAddingRichTextTag)
+           {
+                isAddingRichTextTag = true; 
+                dialogueText.text += letter; 
+                if (letter == '>')
+                {
+                    isAddingRichTextTag = false; 
+                }
+           }
+           else
+           {
+                dialogueText.text += letter; 
+                yield return new WaitForSeconds(typingSpeed); 
+           }
+        }
+        canContinueToNextLine = true; 
+        continueIcon.SetActive(true);
+        DisplayChoices(); 
     }
 
     private void HandleTags(List<string> currentTags)
@@ -130,6 +198,25 @@ public class DialogueManager : MonoBehaviour
             {
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
+                    if (displayNameText.text == "Player")
+                    { 
+                        speakerWashi.color = new Color32(255, 139, 212, 255); 
+                    }
+                    else if (displayNameText.text == "Travel Agent")
+                    {
+                        speakerWashi.color = new Color32(175, 85, 60, 255);
+                    }
+                    else if (displayNameText.text == "Security")
+                    {
+                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                    }
+                    else if (displayNameText.text == "Barista")
+                    {
+                        speakerWashi.color = new Color32(192, 207, 68, 255);
+                    }
+                    else {
+                        speakerWashi.color = new Color32(0, 0, 0, 255);
+                    }
                     break;
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue); 
@@ -170,6 +257,13 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(SelectFirstchoice()); 
     }
 
+    private void HideChoices()
+    {
+        foreach (GameObject choiceButton in choices)
+        {
+            choiceButton.SetActive(false); 
+        }
+    }
     private IEnumerator SelectFirstchoice()
     {
         //Grabs the first choice first and waits. 
@@ -180,7 +274,21 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
-        currentStory.ChooseChoiceIndex(choiceIndex);
+        if (canContinueToNextLine)
+        {
+            currentStory.ChooseChoiceIndex(choiceIndex);
+           //ContinueStory(); 
+        }
+    }
 
+   public Ink.Runtime.Object GetVariableState(string variableName) 
+    {
+        Ink.Runtime.Object variableValue = null;
+        dialogueVariables.variables.TryGetValue(variableName, out variableValue);
+        if (variableValue == null) 
+        {
+            Debug.LogWarning("Ink Variable was found to be null: " + variableName);
+        }
+        return variableValue;
     }
 }
