@@ -1,30 +1,38 @@
-->Introduction
+INCLUDE globals.ink
+-> Introduction
 === Introduction ===
-"Hola, ¿qué te apetece tomar?"<br><color=\#666666><i>Hi, what do you feel like having?</color></i>#speaker:Barista #layout:left
+"Hola, ¿qué te apetece tomar?"<br><i><color=\#666666>Hi, what do you feel like having?<br><i></color>#speaker:Barista
 ->start
-=== start === 
-What should I order?"#speaker:Player #layout:left
-* [Latte, please!]
-->latte
-* [Espresso, please!]
-->espresso
-* [One iced latte, please!] 
-->iced
-=== latte ===
-"Please can I get one <color=\#5B81FF>medium latte</color>?"#speaker:Player #layout:left
-"Sure, one <color=\#5B81FF>medium latte</color> coming right up! That's 2.50, please."#speaker:Barista #layout:left
-"Perfect, <color=\#5B81FF>gracias</color>!"#speaker:Player #layout:left
-"You're welcome, have a good day."#speaker:Barista #layout:left
-->END 
-=== espresso ===
-"Please can I have one <color=\#5B81FF>double espresso</color>?"#speaker:Player #layout:left
-"Of course, one <color=\#5B81FF>double espresso</color> is 3.45, is that okay?"#speaker:Barista #layout:left
-"Definitely! <color=\#5B81FF>gracias</color>!"#speaker:Player #layout:left
-"You're welcome, have a great day!"#speaker:Barista #layout:left
-->END
-=== iced ===
-"Please can I have one <color=\#5B81FF>iced latte</color>?"#speaker:Player #layout:left
-"No problem, perfect for a hot day like today. That comes to 2.65, please."#speaker:Barista #layout:left
-"Amazing, <color=\#5B81FF>gracias</color>!"#speaker:Player #layout:left
-"Anytime, have a wonderful day!"#speaker:Barista #layout:left
-->END
+=== start ===
+"Me gustaría un cappuccino por favor."<br><i><color=\#666666>I would like a cappuccino please.<br><i></color>#speaker:Player
+"Si, claro. ¿Con qué tipo de leche querría su cappuccino: de avena, de vaca o de almendras?"<br><i><color=\#666666>Yes, of course. With what type of milk would you like your cappuccino: oat, cow or almond milk?<br><i></color>#speaker:Barista
+* [Avena.<br><i><color=\#666666>Oat.<br><i></color>]
+->oat
+* [Vaca.<br><i><color=\#666666>Cow.<br><i></color>]
+->cow
+* [Almendras.<br><i><color=\#666666>Almonds.<br><i></color>]
+->almonds
+=== oat ===
+"Con leche de avena, por favor."<br><i><color=\#666666>With oat milk, please.<br><i></color>#speaker:Player
+"No hay problema. ¿Gustas algo de comer?"<br><i><color=\#666666>No problem. Would you like something to eat?<br><i></color>#speaker:Barista
+"No gracias, pero me gustaría un vaso con agua."<br><i><color=\#666666>No, thanks but I would like a glass of water.<br><i></color>#speaker:Player
+"Son 2.5 euros por favor. Pagas con efectivo o con tarjeta?"<br><i><color=\#666666>It’s 2.5 euros please. Are you paying by cash or card?<br><i></color>#speaker:Barista
+"Con tarjeta por favor."<br><i><color=\#666666>By card please.<br><i></color>#speaker:Player
+"Ok, puedes apoyar aquí la tarjeta. Listo, aquí tienes el café."<br><i><color=\#666666>Ok, you can place your card here. Here’s your coffee ready.<br><i></color>#speaker:Barista
+-> END
+=== cow ===
+"Con leche de vaca, por favor."<br><i><color=\#666666>With cow milk, please.<br><i></color>#speaker:Player
+"No hay problema. ¿Gustas algo de comer?"<br><i><color=\#666666>No problem. Would you like something to eat?<br><i></color>#speaker:Barista
+"No gracias, pero me gustaría un vaso con agua."<br><i><color=\#666666>No, thanks but I would like a glass of water.<br><i></color>#speaker:Player
+"Son 2.5 euros por favor. Pagas con efectivo o con tarjeta?"<br><i><color=\#666666>It’s 2.5 euros please. Are you paying by cash or card?<br><i></color>#speaker:Barista
+"Con tarjeta por favor."<br><i><color=\#666666>By card please.<br><i></color>#speaker:Player
+"Ok, puedes apoyar aquí la tarjeta. Listo, aquí tienes el café."<br><i><color=\#666666>Ok, you can place your card here. Here’s your coffee ready.<br><i></color>#speaker:Barista
+-> END
+=== almonds ===
+"Con leche de almendras, por favor."<br><i><color=\#666666>With almond milk, please.<br><i></color>#speaker:Player
+"No hay problema. ¿Gustas algo de comer?"<br><i><color=\#666666>No problem. Would you like something to eat?<br><i></color>#speaker:Barista
+"No gracias, pero me gustaría un vaso con agua."<br><i><color=\#666666>No, thanks but I would like a glass of water.<br><i></color>#speaker:Player
+"Son 2.5 euros por favor. Pagas con efectivo o con tarjeta?"<br><i><color=\#666666>It’s 2.5 euros please. Are you paying by cash or card?<br><i></color>#speaker:Barista
+"Con tarjeta por favor."<br><i><color=\#666666>By card please.<br><i></color>#speaker:Player
+"Ok, puedes apoyar aquí la tarjeta. Listo, aquí tienes el café."<br><i><color=\#666666>Ok, you can place your card here. Here’s your coffee ready.<br><i></color>#speaker:Barista
+-> END
