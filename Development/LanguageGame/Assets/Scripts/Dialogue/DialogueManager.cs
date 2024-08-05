@@ -198,7 +198,7 @@ public class DialogueManager : MonoBehaviour
             {
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    if (displayNameText.text == "Player")
+                    if (displayNameText.text == "Nomad")
                     { 
                         speakerWashi.color = new Color32(255, 139, 212, 255); 
                     }
