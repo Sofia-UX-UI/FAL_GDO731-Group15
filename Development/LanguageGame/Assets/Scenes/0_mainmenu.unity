@@ -2160,6 +2160,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 1720155618353688843, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 414.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720155618353688843, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00084114
+      objectReference: {fileID: 0}
     - target: {fileID: 1738453293348784324, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
         type: 3}
       propertyPath: m_Name
@@ -2364,6 +2374,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042932104868827707, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7123960026575612806, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
         type: 3}
@@ -4167,6 +4182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3284be446c5f09846af007cd32200473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 0}
   area: 0
   newArea: 0
 --- !u!114 &1608607168
