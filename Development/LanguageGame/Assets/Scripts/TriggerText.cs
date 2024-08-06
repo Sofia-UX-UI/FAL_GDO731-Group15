@@ -11,6 +11,7 @@ public class TriggerText : MonoBehaviour
    
  private void Awake()
    {
+    playerInRange = false;
     disableditem.SetActive(true); 
     //enableditem.SetActive(false); 
    }
@@ -19,6 +20,7 @@ public class TriggerText : MonoBehaviour
    {
         if (collider.gameObject.tag == "Player")
         {
+            playerInRange = true;
             disableditem.SetActive(false);
            // enableditem.SetActive(true); 
         }
