@@ -34,6 +34,7 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory; //track which story 
     public bool dialogueIsPlaying {get; private set;} //Track to see if dialogue is actively playing or not. 
     
+    [SerializeField] private GameObject settingsPanel;
     private bool canContinueToNextLine = false; 
     private Coroutine displayLineCoroutine; 
 
@@ -88,7 +89,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (canContinueToNextLine && currentStory.currentChoices.Count ==0 && InputManager.GetInstance().GetSubmitPressed())    //if space or continue is pressed it continues to the next line of dialogue 
+        if (canContinueToNextLine && currentStory.currentChoices.Count ==0 && InputManager.GetInstance().GetSubmitPressed() && !settingsPanel.active)    //if space or continue is pressed it continues to the next line of dialogue 
         {
             ContinueStory(); 
         }

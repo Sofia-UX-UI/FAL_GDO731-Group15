@@ -4051,6 +4051,7 @@ MonoBehaviour:
   - {fileID: 372261181}
   - {fileID: 945475731}
   - {fileID: 880233177}
+  settingsPanel: {fileID: 1368687148}
 --- !u!1 &1260013625
 GameObject:
   m_ObjectHideFlags: 0
