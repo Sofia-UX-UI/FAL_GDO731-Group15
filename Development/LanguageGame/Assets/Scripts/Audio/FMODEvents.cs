@@ -5,6 +5,9 @@ using FMODUnity;
 // code inspired from: https://www.youtube.com/watch?v=rcBHIOjZDpk 
 public class FMODEvents : MonoBehaviour
 {
+   //Voice Acting 
+    [field: Header("Hola Voice Acting")]
+    [field: SerializeField] public EventReference hola {get; private set;} 
    //SFX
    //[field: Header("Item Dropped SFX")]
    //[field: SerializeField] public EventReference ItemDropped {get; private set;} 

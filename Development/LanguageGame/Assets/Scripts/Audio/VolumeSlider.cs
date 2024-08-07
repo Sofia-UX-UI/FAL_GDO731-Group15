@@ -10,7 +10,7 @@ public class VolumeSlider : MonoBehaviour
     {
         MASTER, 
         MUSIC, 
-     //   AMBIENCE, 
+        VOICE, 
         SFX
     }
 
@@ -33,9 +33,9 @@ private void Update()
         case VolumeType.MUSIC:
             volumeSlider.value = AudioManager.instance.musicVolume;
             break; 
-       // case VolumeType.AMBIENCE:
-        //    volumeSlider.value = AudioManager.instance.ambienceVolume;
-        //    break; 
+        case VolumeType.VOICE:
+            volumeSlider.value = AudioManager.instance.voiceVolume;
+            break; 
         case VolumeType.SFX:
             volumeSlider.value = AudioManager.instance.SFXVolume;
             break; 
@@ -54,9 +54,9 @@ public void OnSliderValueChanged()
         case VolumeType.MUSIC:
             AudioManager.instance.musicVolume = volumeSlider.value; 
             break; 
-      //  case VolumeType.AMBIENCE:
-       //     AudioManager.instance.ambienceVolume = volumeSlider.value; 
-       //     break; 
+        case VolumeType.VOICE:
+            AudioManager.instance.voiceVolume = volumeSlider.value; 
+            break; 
         case VolumeType.SFX:
             AudioManager.instance.SFXVolume = volumeSlider.value; 
             break; 

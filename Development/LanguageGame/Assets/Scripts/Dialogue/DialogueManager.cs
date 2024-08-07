@@ -129,15 +129,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            //dialogueText.text = currentStory.Continue(); //will pull next line of dialogue --- replaced with typing below 
             if (displayLineCoroutine != null)
             {
                 StopCoroutine(displayLineCoroutine); 
             }
             displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
-            
-            //Dealing with tags 
-            HandleTags(currentStory.currentTags); 
+            HandleTags(currentStory.currentTags);  //Dealing with tags 
         }
         else 
         {
@@ -254,7 +251,6 @@ public class DialogueManager : MonoBehaviour
         {
             choices[i].gameObject.SetActive(false); 
         }
-
         StartCoroutine(SelectFirstchoice()); 
     }
 
