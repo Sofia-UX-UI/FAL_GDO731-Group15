@@ -1,3 +1,6 @@
 VAR characterName = ""
 VAR boardingPass = "no"
 VAR securityCheck = "no"
+VAR gateAgent = "no"
+VAR learnedThankYou = "no"
+VAR learnedHello = "no"
