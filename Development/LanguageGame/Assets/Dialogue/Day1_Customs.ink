@@ -19,7 +19,8 @@ INCLUDE globals.ink
   	"<color=\#0079C0>Gracias.</color>" #speaker: Customs Agent
   	"Things look good, please enjoy your stay." #speaker: Customs Agent
   	"¡Gracias!" #speaker:Nomad
-->END
+  	~ customsCheck = "yes"
+    ->END
 * [<color=\#0079C0>Dos horas</color>]
    	"<color=\#0079C0>Dos horas" #speaker:Nomad
     "Two hours?” #speaker: Customs Agent
@@ -30,7 +31,8 @@ INCLUDE globals.ink
   	"<color=\#0079C0>Gracias.</color>" #speaker: Customs Agent
   	"Things look good, please enjoy your stay." #speaker: Customs Agent
     "¡Gracias!" #speaker:Nomad
-->END
+    ~ customsCheck = "yes"
+    ->END
 * [<color=\#0079C0>Dos veces</color>]
    	"<color=\#0079C0>Dos veces</color>" #speaker:Nomad
     "<color=\#0079C0>¿Dos veces?</color> You've been here before?” #speaker: Customs Agent
@@ -40,4 +42,5 @@ INCLUDE globals.ink
     "<color=\#0079C0>Dos meses</color>. You were close." #speaker: Customs Agent
     "Please enjoy your stay, hopefully you will come back in the future." #speaker: Customs Agent
     "<color=\#0079C0>¡Gracias!</color>" #speaker:Nomad
-->END
+    ~ customsCheck = "yes"
+    ->END
