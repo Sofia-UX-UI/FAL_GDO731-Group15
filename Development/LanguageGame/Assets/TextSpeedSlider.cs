@@ -14,6 +14,6 @@ public class TextSpeedSlider : MonoBehaviour
 
     public void OnSliderValueChanged()
     {
-        DialogueManager.instance.typingSpeed = typingSpeedSlider.value; 
+        AudioManager.instance.typingSpeed = typingSpeedSlider.value; 
     }
 }
