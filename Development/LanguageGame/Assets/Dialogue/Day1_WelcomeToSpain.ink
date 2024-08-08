@@ -26,7 +26,7 @@ INCLUDE globals.ink
     { learnedThankYou == "no": ->thankYou | ->remind }
     ->END
  * [No]
-    "<color=\#0079C0>No, gracias!</color>" #speaker:Nomad
+    "No." #speaker:Nomad
     ->END
 === thankYou ===
 "How do you say thank you in Spanish?" #speaker:Nomad
