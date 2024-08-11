@@ -201,9 +201,9 @@ public class DialogueManager : MonoBehaviour
                     displayNameText.text = tagValue;
                     if (displayNameText.text == "Nomad")
                     { 
-                        speakerWashi.color = new Color32(255, 139, 212, 255); 
+                        speakerWashi.color = new Color32(241, 95, 95, 255); 
                     }
-                    else if (displayNameText.text == "Travel Agent")
+                    else if (displayNameText.text == "Airline Agent")
                     {
                         speakerWashi.color = new Color32(175, 85, 60, 255);
                     }
@@ -214,6 +214,10 @@ public class DialogueManager : MonoBehaviour
                     else if (displayNameText.text == "Barista")
                     {
                         speakerWashi.color = new Color32(192, 207, 68, 255);
+                    }
+                    else if (displayNameText.text == "Customer")
+                    {
+                        speakerWashi.color = new Color32(255, 139, 212, 255);
                     }
                     else {
                         speakerWashi.color = new Color32(0, 0, 0, 255);

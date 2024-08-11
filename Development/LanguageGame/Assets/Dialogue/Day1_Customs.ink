@@ -1,24 +1,24 @@
 INCLUDE globals.ink
-“<color=\#0079C0>Siguiente, por favor.</color>” #speaker: Customs Agent
-“<color=\#0079C0>¡Hola!</color>” #speaker:Nomad
-“<color=\#0079C0>¡Hola! ¿Cuál es el propósito de su viaje?</color>” #speaker: Customs Agent #voiceover: Customs1
-“Umm” #speaker:Nomad
-“<color=\#0079C0>¿Cuál es el propósito de su viaje?</color><br> It means, what is the purpose of your trip?” #speaker: Customs Agent
-“Oh, to explore and get to know Valencia." #speaker:Nomad 
-“Are you coming for the festival?”#speaker: Customs Agent 
-“What festival?” #speaker:Nomad
-“Fallas." #speaker: Customs Agent
-“I’ve never heard of it.” #speaker:Nomad
-“How long do you plan to stay in the country?” #speaker: Customs Agent
+<color=\#0079C0>Siguiente, por favor.</color>#speaker:Customs Agent
+<color=\#0079C0>¡Hola!</color>#speaker:Nomad
+<color=\#0079C0>¡Hola! ¿Cuál es el propósito de su viaje?</color>#speaker:Customs Agent #voiceover:Customs1
+Umm#speaker:Nomad
+<color=\#0079C0>¿Cuál es el propósito de su viaje?</color><br> It means, what is the purpose of your trip?#speaker:Customs Agent
+Oh, to explore and get to know Valencia.#speaker:Nomad 
+Are you coming for the festival?#speaker:Customs Agent 
+What festival?#speaker:Nomad
+Fallas.#speaker:Customs Agent
+I’ve never heard of it.#speaker:Nomad
+How long do you plan to stay in the country?#speaker:Customs Agent
 * [<color=\#0079C0>Dos meses</color>]
-   	"<color=\#0079C0>Dos meses</color>" #speaker:Nomad
-   	"Two months?" #speaker: Customs Agent
-   	"Yes, <color=\#0079C0>sí</color>."
-  	"Can I see your return ticket?" #speaker: Customs Agent
-    "<color=\#0079C0>Sí</color>, here you go." #speaker:Nomad
-  	"<color=\#0079C0>Gracias.</color>" #speaker: Customs Agent
-  	"Things look good, please enjoy your stay." #speaker: Customs Agent
-  	"¡Gracias!" #speaker:Nomad
+   	<color=\#0079C0>Dos meses</color>#speaker:Nomad
+   	Two months?#speaker:Customs Agent
+   	Yes, <color=\#0079C0>sí</color>.
+  	Can I see your return ticket?#speaker:Customs Agent
+    <color=\#0079C0>Sí</color>, here you go.#speaker:Nomad
+  	<color=\#0079C0>Gracias.</color>#speaker:Customs Agent
+  	Things look good, please enjoy your stay.#speaker:Customs Agent
+  	¡Gracias!#speaker:Nomad
   	~ customsCheck = "yes"
     ->END
 * [<color=\#0079C0>Dos horas</color>]

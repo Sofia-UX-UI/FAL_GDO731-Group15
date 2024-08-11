@@ -353,8 +353,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1512,8 +1512,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Day 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 47aee60d4bf1f7c44b65df61512625ef, type: 2}
-  m_sharedMaterial: {fileID: -5896209954526993016, guid: 47aee60d4bf1f7c44b65df61512625ef,
+  m_fontAsset: {fileID: 11400000, guid: 71893b9ff87871f4bab4223e52ad07c5, type: 2}
+  m_sharedMaterial: {fileID: -2941130447962189487, guid: 71893b9ff87871f4bab4223e52ad07c5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2580,7 +2580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.34117648}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3304,8 +3304,8 @@ MonoBehaviour:
   m_text: I learnt about transport from a worker in the airport, and I took the ____
     to my rental.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 47aee60d4bf1f7c44b65df61512625ef, type: 2}
-  m_sharedMaterial: {fileID: -5896209954526993016, guid: 47aee60d4bf1f7c44b65df61512625ef,
+  m_fontAsset: {fileID: 11400000, guid: 71893b9ff87871f4bab4223e52ad07c5, type: 2}
+  m_sharedMaterial: {fileID: -2941130447962189487, guid: 71893b9ff87871f4bab4223e52ad07c5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3342,7 +3342,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 19
+  m_lineSpacing: -20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -4134,7 +4134,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e68d271d63a0bc14eb0776125c59faa6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 747df164733ab0b42ad715a8049c2047, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6050,7 +6050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.132}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41.216858, y: -3.1}
+  m_AnchoredPosition: {x: 33.4, y: -3.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &719502156
@@ -7703,8 +7703,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'My first day in Spain has come to an end already! It was so  ____. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 47aee60d4bf1f7c44b65df61512625ef, type: 2}
-  m_sharedMaterial: {fileID: -5896209954526993016, guid: 47aee60d4bf1f7c44b65df61512625ef,
+  m_fontAsset: {fileID: 11400000, guid: 71893b9ff87871f4bab4223e52ad07c5, type: 2}
+  m_sharedMaterial: {fileID: -2941130447962189487, guid: 71893b9ff87871f4bab4223e52ad07c5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7741,7 +7741,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 19
+  m_lineSpacing: -20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -7765,7 +7765,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -168.90804, w: -41.14293}
+  m_margin: {x: 0, y: 0, z: -154.2814, w: -41.14293}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -8525,7 +8525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.28}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58.08345, y: -3.124115}
+  m_AnchoredPosition: {x: 53, y: -3.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1051505907
@@ -11228,7 +11228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292.9, y: -9}
+  m_AnchoredPosition: {x: -295.6, y: 24.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1333638726
@@ -11372,7 +11372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.34117648}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12077,8 +12077,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Day 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 47aee60d4bf1f7c44b65df61512625ef, type: 2}
-  m_sharedMaterial: {fileID: -5896209954526993016, guid: 47aee60d4bf1f7c44b65df61512625ef,
+  m_fontAsset: {fileID: 11400000, guid: 71893b9ff87871f4bab4223e52ad07c5, type: 2}
+  m_sharedMaterial: {fileID: -2941130447962189487, guid: 71893b9ff87871f4bab4223e52ad07c5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -12245,7 +12245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1499160356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12943,7 +12943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02abd8fbcf3940646bab40552b11e834, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 747df164733ab0b42ad715a8049c2047, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13185,8 +13185,8 @@ MonoBehaviour:
 
     Nomad '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 47aee60d4bf1f7c44b65df61512625ef, type: 2}
-  m_sharedMaterial: {fileID: -5896209954526993016, guid: 47aee60d4bf1f7c44b65df61512625ef,
+  m_fontAsset: {fileID: 11400000, guid: 71893b9ff87871f4bab4223e52ad07c5, type: 2}
+  m_sharedMaterial: {fileID: -2941130447962189487, guid: 71893b9ff87871f4bab4223e52ad07c5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -13223,7 +13223,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 19
+  m_lineSpacing: -20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -13277,7 +13277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 265, y: 108}
+  m_AnchoredPosition: {x: 265, y: 106}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1694154785
@@ -14078,8 +14078,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15527,7 +15527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02abd8fbcf3940646bab40552b11e834, type: 3}
+  m_Sprite: {fileID: 21300000, guid: de2e14425e2e42946b98d0ef6dcf0ab6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16474,7 +16474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -294.1, y: 46.2}
+  m_AnchoredPosition: {x: -294.1, y: 66.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143770621
@@ -16618,7 +16618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.34117648}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
