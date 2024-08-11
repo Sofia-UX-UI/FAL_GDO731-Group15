@@ -821,7 +821,7 @@ PrefabInstance:
     - target: {fileID: 6334357588041947812, guid: 9681ca583ffc1964ca8a15222a21ddc5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6610709945462983609, guid: 9681ca583ffc1964ca8a15222a21ddc5,
         type: 3}
@@ -1416,12 +1416,12 @@ PrefabInstance:
     - target: {fileID: 5285142218025001139, guid: 88079b66c5152b7409d6de372abc1475,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.3520937
+      value: -5.5969124
       objectReference: {fileID: 0}
     - target: {fileID: 5285142218025001139, guid: 88079b66c5152b7409d6de372abc1475,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01783967
+      value: -0.018429756
       objectReference: {fileID: 0}
     - target: {fileID: 5285142218025001139, guid: 88079b66c5152b7409d6de372abc1475,
         type: 3}
@@ -1436,12 +1436,12 @@ PrefabInstance:
     - target: {fileID: 7849903390516617084, guid: 88079b66c5152b7409d6de372abc1475,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.3520937
+      value: 5.5969124
       objectReference: {fileID: 0}
     - target: {fileID: 7849903390516617084, guid: 88079b66c5152b7409d6de372abc1475,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.01644
+      value: 3.01703
       objectReference: {fileID: 0}
     - target: {fileID: 7849903390516617084, guid: 88079b66c5152b7409d6de372abc1475,
         type: 3}
@@ -2996,12 +2996,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945871817}
   m_CullTransparentMesh: 1
---- !u!95 &957604614 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1507467122525539222, guid: 1b5ff4cc5f7fc5848b2c5b8d02ecefc4,
-    type: 3}
-  m_PrefabInstance: {fileID: 7042314276222545972}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &987059983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3935,7 +3929,6 @@ MonoBehaviour:
   dialogueText: {fileID: 670092623}
   displayNameText: {fileID: 2021279851}
   speakerWashi: {fileID: 1781813711}
-  portraitAnimator: {fileID: 957604614}
   choices:
   - {fileID: 372261181}
   - {fileID: 945475731}
