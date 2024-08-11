@@ -422,6 +422,11 @@ PrefabInstance:
       propertyPath: newArea
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2883233962089029049, guid: 237fccd48139b4946b3eea032d75fb10,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.016
+      objectReference: {fileID: 0}
     - target: {fileID: 4045370539887930287, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
       propertyPath: m_Name
@@ -440,7 +445,7 @@ PrefabInstance:
     - target: {fileID: 6684972180233463485, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9525872
+      value: 0.97640187
       objectReference: {fileID: 0}
     - target: {fileID: 6684972180233463485, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
@@ -455,7 +460,7 @@ PrefabInstance:
     - target: {fileID: 6684972180233463485, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -89.971756
+      value: -89.972
       objectReference: {fileID: 0}
     - target: {fileID: 6684972180233463485, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
@@ -624,6 +629,11 @@ PrefabInstance:
       propertyPath: newArea
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2883233962089029049, guid: 237fccd48139b4946b3eea032d75fb10,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.452
+      objectReference: {fileID: 0}
     - target: {fileID: 4045370539887930287, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
       propertyPath: m_Name
@@ -632,7 +642,7 @@ PrefabInstance:
     - target: {fileID: 6367296137133570004, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6684972180233463485, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
@@ -698,7 +708,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a84610ba25bb4d3449a875b230a9c200,
+      objectReference: {fileID: 21300000, guid: 5693eb54ac600664eb705514afc27bbf,
         type: 3}
     - target: {fileID: 7608696483416187218, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
@@ -717,7 +727,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6684972180233463485, guid: 237fccd48139b4946b3eea032d75fb10,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 642032410}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 237fccd48139b4946b3eea032d75fb10, type: 3}
 --- !u!1 &372261181 stripped
@@ -726,6 +740,90 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7042314276222545972}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &642032409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 642032410}
+  - component: {fileID: 642032411}
+  m_Layer: 0
+  m_Name: CoffeeShopMugCrop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &642032410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642032409}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.043}
+  m_LocalScale: {x: 0.5071508, y: 0.25682515, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1424331048}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &642032411
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642032409}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 48ed054e234a4a74691129bb578e49b7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.63, y: 1.33}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &666800155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,7 +1145,7 @@ PrefabInstance:
     - target: {fileID: 2883233962089029049, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.3
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4045370539887930287, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}
@@ -1123,7 +1221,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a84610ba25bb4d3449a875b230a9c200,
+      objectReference: {fileID: 21300000, guid: 5693eb54ac600664eb705514afc27bbf,
         type: 3}
     - target: {fileID: 7608696483416187218, guid: 237fccd48139b4946b3eea032d75fb10,
         type: 3}

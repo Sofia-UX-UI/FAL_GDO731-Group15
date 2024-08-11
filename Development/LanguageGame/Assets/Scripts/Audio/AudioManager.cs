@@ -18,17 +18,18 @@ public class AudioManager : MonoBehaviour
     public float masterVolume = 1; 
     [Range(0, 1)]
     public float musicVolume = 1; 
-   // [Range(0, 1)]
-    //public float ambienceVolume = 1; 
+   [Range(0, 1)]
+    public float voiceVolume = 1; 
     [Range(0, 1)]
     public float SFXVolume = 1;
+    
     [Header("TypingSpeed")]
     [Range(-100, 100)]
     public float typingSpeed = 0.04f;
 
     private Bus masterBus; 
     private Bus musicBus; 
-   // private Bus ambienceBus; 
+    private Bus voiceBus; 
     private Bus sfxBus; 
   
   //public bool PlayMusic; 
@@ -55,7 +56,7 @@ public class AudioManager : MonoBehaviour
 
     masterBus = RuntimeManager.GetBus("bus:/"); 
     musicBus = RuntimeManager.GetBus("bus:/Music"); 
-    //ambienceBus = RuntimeManager.GetBus("bus:/Ambience"); 
+    voiceBus = RuntimeManager.GetBus("bus:/voice"); 
     sfxBus = RuntimeManager.GetBus("bus:/SFX"); 
   }
 
@@ -71,7 +72,7 @@ public class AudioManager : MonoBehaviour
    {
       masterBus.setVolume(masterVolume); 
       musicBus.setVolume(musicVolume);
-      //ambienceBus.setVolume(ambienceVolume); 
+      voiceBus.setVolume(voiceVolume); 
       sfxBus.setVolume(SFXVolume); 
    }
 

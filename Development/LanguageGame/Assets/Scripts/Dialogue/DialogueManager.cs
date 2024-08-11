@@ -23,8 +23,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText; //to change dialogue text 
     [SerializeField] private TextMeshProUGUI displayNameText; //to change Speaker name
     [SerializeField] private Image speakerWashi; 
-    [SerializeField] private Animator portraitAnimator; //to change Speaker image
-    private Animator layoutAnimator; 
+
+    //[SerializeField] private Animator portraitAnimator; //to change Speaker image
+   // private Animator layoutAnimator; 
 
     [Header ("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -41,8 +42,9 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance {get; private set;} 
 
     private const string SPEAKER_TAG = "speaker";
-    private const string PORTRAIT_TAG = "portrait";
-    private const string LAYOUT_TAG = "layout"; 
+    //private const string PORTRAIT_TAG = "portrait";
+    //private const string LAYOUT_TAG = "layout"; 
+    private const string VOICEOVER_TAG = "voiceover";
 
     private DialogueVariables dialogueVariables;
      
@@ -70,7 +72,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false; 
         dialoguePanel.SetActive(false); 
         //get the layout animator 
-        layoutAnimator = dialoguePanel.GetComponent<Animator>(); 
+        //layoutAnimator = dialoguePanel.GetComponent<Animator>(); 
         
         //get all the choices 
         choicesText = new TextMeshProUGUI[choices.Length];
@@ -108,8 +110,8 @@ public class DialogueManager : MonoBehaviour
 
         //reset portrait, speaker name and layout 
         displayNameText.text = "???";
-        portraitAnimator.Play("default"); 
-        layoutAnimator.Play("right"); 
+       // portraitAnimator.Play("default"); 
+        //layoutAnimator.Play("right"); 
 
         ContinueStory();  //grab next line of dialogue and continue forward. 
     }
@@ -129,15 +131,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            //dialogueText.text = currentStory.Continue(); //will pull next line of dialogue --- replaced with typing below 
             if (displayLineCoroutine != null)
             {
                 StopCoroutine(displayLineCoroutine); 
             }
             displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
-            
-            //Dealing with tags 
-            HandleTags(currentStory.currentTags); 
+            HandleTags(currentStory.currentTags);  //Dealing with tags 
         }
         else 
         {
@@ -147,9 +146,11 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator DisplayLine(string line)
     {
-        dialogueText.text = ""; //empty dialogue text
+        dialogueText.text = line;
+        dialogueText.maxVisibleCharacters = 0; 
         continueIcon.SetActive(false); //hide items until done typing 
         HideChoices(); 
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.ContinueButton, this.transform.position);
 
         canContinueToNextLine = false; 
         bool isAddingRichTextTag = false; 
@@ -158,13 +159,12 @@ public class DialogueManager : MonoBehaviour
         {
            if(InputManager.GetInstance().GetSubmitPressed())
            {
-                dialogueText.text = line; 
+                dialogueText.maxVisibleCharacters = line.Length; 
                 break; 
            }
-           if (letter == '<' || isAddingRichTextTag)
+           if (letter == '<' || isAddingRichTextTag) //Rich text tags
            {
                 isAddingRichTextTag = true; 
-                dialogueText.text += letter; 
                 if (letter == '>')
                 {
                     isAddingRichTextTag = false; 
@@ -172,7 +172,7 @@ public class DialogueManager : MonoBehaviour
            }
            else
            {
-                dialogueText.text += letter; 
+                dialogueText.maxVisibleCharacters++; 
                 yield return new WaitForSeconds(typingSpeed); 
            }
         }
@@ -201,9 +201,9 @@ public class DialogueManager : MonoBehaviour
                     displayNameText.text = tagValue;
                     if (displayNameText.text == "Nomad")
                     { 
-                        speakerWashi.color = new Color32(255, 139, 212, 255); 
+                        speakerWashi.color = new Color32(241, 95, 95, 255); 
                     }
-                    else if (displayNameText.text == "Travel Agent")
+                    else if (displayNameText.text == "Airline Agent")
                     {
                         speakerWashi.color = new Color32(175, 85, 60, 255);
                     }
@@ -215,15 +215,34 @@ public class DialogueManager : MonoBehaviour
                     {
                         speakerWashi.color = new Color32(192, 207, 68, 255);
                     }
+                    else if (displayNameText.text == "Customer")
+                    {
+                        speakerWashi.color = new Color32(255, 139, 212, 255);
+                    }
                     else {
                         speakerWashi.color = new Color32(0, 0, 0, 255);
                     }
                     break;
-                case PORTRAIT_TAG:
-                    portraitAnimator.Play(tagValue); 
-                    break; 
-                case LAYOUT_TAG:
-                    layoutAnimator.Play(tagValue);
+              
+                case VOICEOVER_TAG:
+                    if (tagValue == "Welcome1")
+                    { 
+                        AudioManager.instance.PlayOneShot(FMODEvents.instance.Welcome1, this.transform.position);
+                    }
+                    else if (tagValue == "Welcome2")
+                    {
+                        AudioManager.instance.PlayOneShot(FMODEvents.instance.Welcome2, this.transform.position);
+                    }
+                    else if (tagValue == "Customs1")
+                    {
+                        AudioManager.instance.PlayOneShot(FMODEvents.instance.Customs1, this.transform.position);
+                    }
+                    else if (tagValue == "Barista")
+                    {
+                        AudioManager.instance.PlayOneShot(FMODEvents.instance.Gracias, this.transform.position);
+                    }
+                    else {
+                    }
                     break;
                 default: 
                     Debug.LogWarning("Tag came in but is not currently being handeled:" + tag); 
@@ -254,7 +273,6 @@ public class DialogueManager : MonoBehaviour
         {
             choices[i].gameObject.SetActive(false); 
         }
-
         StartCoroutine(SelectFirstchoice()); 
     }
 
