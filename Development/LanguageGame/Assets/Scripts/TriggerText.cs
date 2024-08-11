@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class TriggerText : MonoBehaviour
 {
-   [Header("item to disable")]
-   [SerializeField] private GameObject disableditem; 
+   [Header("item to enable/disable")]
+   [SerializeField] private GameObject item; 
   // [Header("item to enable")]
    //[SerializeField] private GameObject enableditem;  
-   
+   public bool objectEnable; 
  private void Awake()
    {
-    disableditem.SetActive(true); 
+   // item.SetActive(true); 
     //enableditem.SetActive(false); 
    }
 
@@ -19,8 +19,14 @@ public class TriggerText : MonoBehaviour
    {
         if (collider.gameObject.tag == "Player")
         {
-            disableditem.SetActive(false);
-           // enableditem.SetActive(true); 
+           if(objectEnable) 
+           {
+            item.SetActive(true);
+           }
+           else
+           {
+            item.SetActive(false);
+           }
         }
    }
 }
