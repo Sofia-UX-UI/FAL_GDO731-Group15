@@ -8,6 +8,8 @@ public class LoadScene : MonoBehaviour
 
 {
     public Animator transition;
+    public Animator plane;
+    
     [Header("Area")]
     [SerializeField] private MusicTransition area; 
     [Header("Moving Area")]
@@ -19,26 +21,32 @@ public class LoadScene : MonoBehaviour
         AudioManager.instance.SetBackgroundMusic(newArea); 
         Debug.Log(newArea); 
         UnityEngine.SceneManagement.SceneManager.LoadScene("1_Airport"); 
+        
     }
 
     public void LoadLevel2()
     {
         StartCoroutine ("Transition");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Level_Two"); 
-        AudioManager.instance.SetBackgroundMusic(newArea); 
+        AudioManager.instance.SetBackgroundMusic(newArea);
+        
     }
     public void LoadMenu()
     {
         StartCoroutine ("Transition");
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu"); 
         AudioManager.instance.SetBackgroundMusic(area); 
+        
        
     }
 
     IEnumerator Transition()
     {
+        
         transition.SetTrigger("Start");
+        plane.Play("Plane_Transition");
         yield return new WaitForSeconds(1f);
+        
 
     }
 }
