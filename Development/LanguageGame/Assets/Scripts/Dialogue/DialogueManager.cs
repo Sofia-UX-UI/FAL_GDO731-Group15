@@ -150,7 +150,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.maxVisibleCharacters = 0; 
         continueIcon.SetActive(false); //hide items until done typing 
         HideChoices(); 
-        AudioManager.instance.PlayOneShot(FMODEvents.instance.ContinueButton, this.transform.position);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.DialogueContinueButton, this.transform.position);
 
         canContinueToNextLine = false; 
         bool isAddingRichTextTag = false; 

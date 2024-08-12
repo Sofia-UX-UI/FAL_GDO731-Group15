@@ -1804,6 +1804,34 @@ MonoBehaviour:
       Data3: 2063077291
       Data4: -132840797
     Path: event:/Voice/Gracias
+  <JournalOpen>k__BackingField:
+    Guid:
+      Data1: 1939915108
+      Data2: 1195972784
+      Data3: -2053926246
+      Data4: -68941132
+    Path: event:/SFX/OpenJournal
+  <FlipPage>k__BackingField:
+    Guid:
+      Data1: 419443348
+      Data2: 1282804685
+      Data3: -915655272
+      Data4: -1225368543
+    Path: event:/SFX/FlipPage
+  <Sticker>k__BackingField:
+    Guid:
+      Data1: 663000336
+      Data2: 1095247456
+      Data3: -1816160072
+      Data4: 124518197
+    Path: event:/SFX/Stickers
+  <WritingSound>k__BackingField:
+    Guid:
+      Data1: -1286111268
+      Data2: 1240103330
+      Data3: 1031132805
+      Data4: 675944007
+    Path: event:/SFX/Writing
   <Welcome1>k__BackingField:
     Guid:
       Data1: -1062302557
@@ -1832,6 +1860,13 @@ MonoBehaviour:
       Data3: -1775384930
       Data4: -282158562
     Path: event:/SFX/Continue
+  <DialogueContinueButton>k__BackingField:
+    Guid:
+      Data1: -1293227284
+      Data2: 1207185954
+      Data3: 744278148
+      Data4: 1896528107
+    Path: event:/SFX/DialogueContinue
   <DoorSound>k__BackingField:
     Guid:
       Data1: -2121254618
