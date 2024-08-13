@@ -38,4 +38,5 @@ Sure. It's 2.5 euros <color=\#0079C0>por favor</color>. Are you paying by cash o
 Card.#speaker:Nomad
 Ok, you can place your card here and here is your <color=\#0079C0>café</color> and <color=\#0079C0>agua</color>.#speaker:Barista
 <color=\#0079C0>¡Gracias!</color>#speaker:Nomad
+~ nomadOrderFinished = "yes"
 ->END 

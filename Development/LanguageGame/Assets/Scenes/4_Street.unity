@@ -1122,6 +1122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 0}
+  plane: {fileID: 0}
   area: 0
   newArea: 1
 --- !u!1001 &815376203
@@ -1507,6 +1508,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 20cca70301284f446ab5b0dd60c9f671,
         type: 3}
+    - target: {fileID: 7153934264440486199, guid: 9681ca583ffc1964ca8a15222a21ddc5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153934264440486199, guid: 9681ca583ffc1964ca8a15222a21ddc5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153934264440486199, guid: 9681ca583ffc1964ca8a15222a21ddc5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7978487505998536724, guid: 9681ca583ffc1964ca8a15222a21ddc5,
         type: 3}
       propertyPath: m_Sprite
@@ -1775,6 +1791,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPC_FacingLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153934264440486199, guid: 27db756d34ed17545ba581cf8feaab17,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153934264440486199, guid: 27db756d34ed17545ba581cf8feaab17,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153934264440486199, guid: 27db756d34ed17545ba581cf8feaab17,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7978487505998536724, guid: 27db756d34ed17545ba581cf8feaab17,
         type: 3}

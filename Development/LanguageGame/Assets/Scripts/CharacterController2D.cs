@@ -41,9 +41,7 @@ public class CharacterController2D : MonoBehaviour
        // }
         HandleHorizontalMovement();
     }
-
-
-
+    
     private void HandleHorizontalMovement()
     {
         Vector2 moveDirection = InputManager.GetInstance().GetMoveDirection();

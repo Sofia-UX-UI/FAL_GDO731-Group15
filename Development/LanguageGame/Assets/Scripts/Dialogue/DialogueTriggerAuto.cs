@@ -7,6 +7,7 @@ public class DialogueTriggerAuto : MonoBehaviour
     [Header("Ink JSON")]
     [SerializeField] TextAsset inkJSON; 
    private bool playerInRange; 
+   [SerializeField] private GameObject customerTrigger;
 
    private void Awake()
    {
@@ -17,7 +18,11 @@ public class DialogueTriggerAuto : MonoBehaviour
    {
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+              if (customerTrigger.activeInHierarchy)
+              {
+                customerTrigger.SetActive(false); 
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON); 
+              }
         }
         else
         {

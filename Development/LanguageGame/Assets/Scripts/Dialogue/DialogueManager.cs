@@ -91,7 +91,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (canContinueToNextLine && currentStory.currentChoices.Count ==0 && InputManager.GetInstance().GetSubmitPressed() && !settingsPanel.active)    //if space or continue is pressed it continues to the next line of dialogue 
+        if (canContinueToNextLine && currentStory.currentChoices.Count ==0 && InputManager.GetInstance().GetSubmitPressed() && !settingsPanel.activeInHierarchy)    //if space or continue is pressed it continues to the next line of dialogue 
         {
             ContinueStory(); 
         }
