@@ -211,6 +211,26 @@ public class DialogueManager : MonoBehaviour
                     {
                         speakerWashi.color = new Color32(68, 113, 199, 255);
                     }
+                    else if (displayNameText.text == "Gate Agent")
+                    {
+                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                    }
+                    else if (displayNameText.text == "Customs Agent")
+                    {
+                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                    }
+                    else if (displayNameText.text == "Airport Staff")
+                    {
+                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                    }
+                    else if (displayNameText.text == "Fallero Artist" || displayNameText.text == "???")
+                    {
+                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                    }
+                     else if (displayNameText.text == "Resident")
+                    {
+                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                    }
                     else if (displayNameText.text == "Barista")
                     {
                         speakerWashi.color = new Color32(192, 207, 68, 255);
@@ -218,6 +238,10 @@ public class DialogueManager : MonoBehaviour
                     else if (displayNameText.text == "Customer")
                     {
                         speakerWashi.color = new Color32(255, 139, 212, 255);
+                    }
+                     else if (displayNameText.text == "Ana")
+                    {
+                        speakerWashi.color = new Color32(232, 93, 255, 255);
                     }
                     else {
                         speakerWashi.color = new Color32(0, 0, 0, 255);
