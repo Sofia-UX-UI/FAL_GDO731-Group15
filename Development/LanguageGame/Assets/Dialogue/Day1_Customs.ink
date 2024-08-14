@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 <color=\#0079C0>Siguiente, por favor.</color>#speaker:Customs Agent
 <color=\#0079C0>¡Hola!</color>#speaker:Nomad
-<color=\#0079C0>¡Hola! ¿Cuál es el propósito de su viaje?</color>#speaker:Customs Agent #voiceover:Customs1
+<color=\#0079C0>¡Hola! ¿Cuál es el propósito de su viaje?</color>#speaker:Customs Agent
 Umm#speaker:Nomad
 <color=\#0079C0>¿Cuál es el propósito de su viaje?</color><br> It means, what is the purpose of your trip?#speaker:Customs Agent
 Oh, to explore and get to know Valencia.#speaker:Nomad 

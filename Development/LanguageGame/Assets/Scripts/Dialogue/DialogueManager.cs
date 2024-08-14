@@ -205,7 +205,7 @@ public class DialogueManager : MonoBehaviour
                     }
                     else if (displayNameText.text == "Airline Agent")
                     {
-                        speakerWashi.color = new Color32(175, 85, 60, 255);
+                        speakerWashi.color = new Color32(247, 101, 140, 255);
                     }
                     else if (displayNameText.text == "Security")
                     {
@@ -213,23 +213,23 @@ public class DialogueManager : MonoBehaviour
                     }
                     else if (displayNameText.text == "Gate Agent")
                     {
-                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                        speakerWashi.color = new Color32(156, 201, 200, 255);
                     }
                     else if (displayNameText.text == "Customs Agent")
                     {
-                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                        speakerWashi.color = new Color32(231, 163, 82, 255);
                     }
                     else if (displayNameText.text == "Airport Staff")
                     {
-                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                        speakerWashi.color = new Color32(173, 126, 177, 255);
                     }
                     else if (displayNameText.text == "Fallero Artist" || displayNameText.text == "???")
                     {
-                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                        speakerWashi.color = new Color32(219, 144, 96, 255);
                     }
                      else if (displayNameText.text == "Resident")
                     {
-                        speakerWashi.color = new Color32(68, 113, 199, 255);
+                        speakerWashi.color = new Color32(195, 228, 134, 255);
                     }
                     else if (displayNameText.text == "Barista")
                     {
@@ -237,7 +237,7 @@ public class DialogueManager : MonoBehaviour
                     }
                     else if (displayNameText.text == "Customer")
                     {
-                        speakerWashi.color = new Color32(255, 139, 212, 255);
+                        speakerWashi.color = new Color32(156, 201, 200, 255);
                     }
                      else if (displayNameText.text == "Ana")
                     {

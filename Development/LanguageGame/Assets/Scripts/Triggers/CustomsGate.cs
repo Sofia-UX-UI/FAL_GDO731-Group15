@@ -8,12 +8,11 @@ public class CustomsGate : MonoBehaviour
 
    private void Update()
    {
-        string objectiveComplete = ((Ink.Runtime.StringValue) DialogueManager
-            .GetInstance()
-            .GetVariableState("customsCheck")).value;
+        string objectiveComplete = ((Ink.Runtime.StringValue) DialogueManager.GetInstance().GetVariableState("customsCheck")).value;
         if (objectiveComplete == "yes") 
         {
             toggleObject.SetActive(false); 
+            Debug.Log("passed customs"); 
         }
         
     }

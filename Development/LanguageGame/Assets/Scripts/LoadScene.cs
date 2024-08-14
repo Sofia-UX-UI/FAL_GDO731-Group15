@@ -34,7 +34,7 @@ public class LoadScene : MonoBehaviour
     public void LoadMenu()
     {
         StartCoroutine ("Transition");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu"); 
+        UnityEngine.SceneManagement.SceneManager.LoadScene("0_mainmenu"); 
         AudioManager.instance.SetBackgroundMusic(area); 
         
        

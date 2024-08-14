@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-<color=\#0079C0>¡Hola!</color>#speaker:Merchant
+<color=\#0079C0>¡Hola!</color>#speaker:???
 <color=\#0079C0>¡Hola!</color>#speaker:Nomad
 { festivalExplained == "no": ->festival }
 { festivalExplained == "yes": ->recap }
@@ -13,8 +13,8 @@ How is it celebrated?#speaker:Nomad
 It's like a huge street party! We have processions that run through the city and marching bands.#speaker:???
 Everyday, we have <color=\#0079C0>la Mascletà</color>, which is an incredible firework display!#speaker:???
 Amazing! I love fireworks!#speaker:Nomad
-It ends with <color=\#0079C0>la Cremà</color>, where we burn the <color=\#0079C0>falles/color>.#speaker:???
-They take months to make. People known as the <color=\#0079C0>fallero artists</color>make them.#speaker:???
+It ends with <color=\#0079C0>la Cremà</color>, where we burn the <color=\#0079C0>falles</color>.#speaker:???
+They take months to make. People known as the <color=\#0079C0>fallero artists</color> make them.#speaker:???
 <color=\#0079C0>Fallero artists</color> sounds like a cool title. Is that what you are?#speaker:Nomad
 It is and I wear it proudly. If you have any more questions let me know.#speaker:Fallero Artist
 <color=\#0079C0>¡Gracias!</color> #speaker:Nomad
@@ -36,7 +36,7 @@ What would you like to know?#speaker:Fallero Artist
     <color=\#0079C0>Fallas</color> is an annual celebration that takes place here in Valencia in commemoration of Saint Joseph.#speaker:Fallero Artist
     It's like a huge street party! We have processions that run through the city and marching bands.#speaker:Fallero Artist
     Everyday, we have <color=\#0079C0>la Mascletà</color>, which is an incredible firework display!#speaker:Fallero Artist
-    It all ends with <color=\#0079C0>la Cremà</color>, where we burn the <color=\#0079C0>falles</color>.
+    It all ends with <color=\#0079C0>la Cremà</color>, where we burn the<color=\#0079C0> falles</color>.
     ->questions
 * [When is it?]
     When does the festival take place?#speaker:Nomad
@@ -46,11 +46,11 @@ What would you like to know?#speaker:Fallero Artist
 * [What is a falles?]
     <color=\#0079C0>Fallas</color> is the festival but what are <color=\#0079C0>falles</color>?#speaker:Nomad
     Gigantic figures made from paper, wood, wax and polystyrene.#speaker:Fallero Artist
-    They take months to make. People known as the <color=\#0079C0>fallero artists</color>make them.#speaker:Fallero Artist
+    They take months to make. People known as the <color=\#0079C0>fallero artists</color> make them.#speaker:Fallero Artist
     ->questions
 == questions ===
  Would you like to know anything else?#speaker:Fallero Artist
-    * [Yes] 
+    * [Yes]
         ->yes
     * [No]
         ->bye
