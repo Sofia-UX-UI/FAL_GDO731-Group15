@@ -29,4 +29,7 @@ public class ContinueAudio : MonoBehaviour
      public void OpenBook(){
         AudioManager.instance.PlayOneShot(FMODEvents.instance.JournalOpen, this.transform.position); 
     }
+    public void PlayWritingShort(){
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.WriteShort, this.transform.position); 
+    }
 }

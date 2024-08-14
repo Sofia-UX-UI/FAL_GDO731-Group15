@@ -237,11 +237,11 @@ public class DialogueManager : MonoBehaviour
                     }
                     else if (displayNameText.text == "Customer")
                     {
-                        speakerWashi.color = new Color32(156, 201, 200, 255);
+                        speakerWashi.color = new Color32(81, 135, 237, 255);
                     }
                      else if (displayNameText.text == "Ana")
                     {
-                        speakerWashi.color = new Color32(232, 93, 255, 255);
+                        speakerWashi.color = new Color32(231, 94, 183, 255);
                     }
                     else {
                         speakerWashi.color = new Color32(0, 0, 0, 255);

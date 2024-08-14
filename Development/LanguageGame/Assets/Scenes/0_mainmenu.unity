@@ -1844,6 +1844,13 @@ MonoBehaviour:
       Data3: 1031132805
       Data4: 675944007
     Path: event:/SFX/Writing
+  <WriteShort>k__BackingField:
+    Guid:
+      Data1: 838600088
+      Data2: 1106957856
+      Data3: -111839863
+      Data4: -386767253
+    Path: event:/SFX/WritingShort
   <Welcome1>k__BackingField:
     Guid:
       Data1: -1062302557

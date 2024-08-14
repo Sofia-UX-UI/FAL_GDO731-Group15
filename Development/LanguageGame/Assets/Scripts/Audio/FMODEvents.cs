@@ -14,6 +14,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference FlipPage {get; private set;}
     [field: SerializeField] public EventReference Sticker {get; private set;}
     [field: SerializeField] public EventReference WritingSound {get; private set;}
+    [field: SerializeField] public EventReference WriteShort {get; private set;}
     [field: Header("Voice Over")]
     [field: SerializeField] public EventReference Welcome1 {get; private set;} 
     [field: SerializeField] public EventReference Welcome2 {get; private set;}

@@ -7,11 +7,11 @@ INCLUDE globals.ink
 <color=\#0079C0>¡Hola!</color>#speaker:Nomad
 <color=\#0079C0>¿Qué puedo conseguirte?</color>#speaker:Barista
 Sorry, I'm learning. I would like a cappuccino please.#speaker:Nomad
-<color=\#0079C0>Sí, claro.</color>Yes, of course.#speaker:Barista
+<color=\#0079C0>Sí, claro.</color> Yes, of course.#speaker:Barista
 How would I order that in Spanish for next time?#speaker:Nomad
 <color=\#0079C0>Me gustaría un cappuccino por favor.</color>#speaker:Barista
 <color=\#0079C0>Me gustaría un cappuccino por favor.</color>#speaker:Nomad
-<color=\#0079C0>Sí.</color>What type of milk would you like?#speaker:Barista
+<color=\#0079C0>Sí.</color> What type of milk would you like?#speaker:Barista
 * [Oat]
 ->oat
 * [Cow]
