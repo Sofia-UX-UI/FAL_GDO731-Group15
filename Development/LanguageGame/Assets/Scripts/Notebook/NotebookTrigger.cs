@@ -26,6 +26,7 @@ public class NotebookTrigger : MonoBehaviour
             {
                 notebook.SetActive(true);
                 notebookCheck = true; 
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.JournalOpen, this.transform.position); 
            }
         }
         else

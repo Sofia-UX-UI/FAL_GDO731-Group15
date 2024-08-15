@@ -91,7 +91,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (canContinueToNextLine && currentStory.currentChoices.Count ==0 && InputManager.GetInstance().GetSubmitPressed() && !settingsPanel.active)    //if space or continue is pressed it continues to the next line of dialogue 
+        if (canContinueToNextLine && currentStory.currentChoices.Count ==0 && InputManager.GetInstance().GetSubmitPressed() && !settingsPanel.activeInHierarchy)    //if space or continue is pressed it continues to the next line of dialogue 
         {
             ContinueStory(); 
         }
@@ -150,7 +150,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.maxVisibleCharacters = 0; 
         continueIcon.SetActive(false); //hide items until done typing 
         HideChoices(); 
-        AudioManager.instance.PlayOneShot(FMODEvents.instance.ContinueButton, this.transform.position);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.DialogueContinueButton, this.transform.position);
 
         canContinueToNextLine = false; 
         bool isAddingRichTextTag = false; 
@@ -205,11 +205,31 @@ public class DialogueManager : MonoBehaviour
                     }
                     else if (displayNameText.text == "Airline Agent")
                     {
-                        speakerWashi.color = new Color32(175, 85, 60, 255);
+                        speakerWashi.color = new Color32(247, 101, 140, 255);
                     }
                     else if (displayNameText.text == "Security")
                     {
                         speakerWashi.color = new Color32(68, 113, 199, 255);
+                    }
+                    else if (displayNameText.text == "Gate Agent")
+                    {
+                        speakerWashi.color = new Color32(156, 201, 200, 255);
+                    }
+                    else if (displayNameText.text == "Customs Agent")
+                    {
+                        speakerWashi.color = new Color32(231, 163, 82, 255);
+                    }
+                    else if (displayNameText.text == "Airport Staff")
+                    {
+                        speakerWashi.color = new Color32(173, 126, 177, 255);
+                    }
+                    else if (displayNameText.text == "Fallero Artist" || displayNameText.text == "???")
+                    {
+                        speakerWashi.color = new Color32(219, 144, 96, 255);
+                    }
+                     else if (displayNameText.text == "Resident")
+                    {
+                        speakerWashi.color = new Color32(195, 228, 134, 255);
                     }
                     else if (displayNameText.text == "Barista")
                     {
@@ -217,7 +237,11 @@ public class DialogueManager : MonoBehaviour
                     }
                     else if (displayNameText.text == "Customer")
                     {
-                        speakerWashi.color = new Color32(255, 139, 212, 255);
+                        speakerWashi.color = new Color32(81, 135, 237, 255);
+                    }
+                     else if (displayNameText.text == "Ana")
+                    {
+                        speakerWashi.color = new Color32(231, 94, 183, 255);
                     }
                     else {
                         speakerWashi.color = new Color32(0, 0, 0, 255);

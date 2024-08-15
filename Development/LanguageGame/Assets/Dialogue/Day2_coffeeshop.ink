@@ -1,38 +1,42 @@
 INCLUDE globals.ink
 -> Introduction
 === Introduction ===
-"Hola, ¿qué te apetece tomar?"<br><i><color=\#666666>Hi, what do you feel like having?<br><i></color>#speaker:Barista
+ <color=\#0079C0>Hola, ¿qué te apetece tomar?</color>#speaker:Barista
 ->start
 === start ===
-"Me gustaría un cappuccino por favor."<br><i><color=\#666666>I would like a cappuccino please.<br><i></color>#speaker:Nomad
-"Si, claro. ¿Con qué tipo de leche querría su cappuccino: de avena, de vaca o de almendras?"<br><i><color=\#666666>Yes, of course. With what type of milk would you like your cappuccino: oat, cow or almond milk?<br><i></color>#speaker:Barista
-* [Avena.<br><i><color=\#666666>Oat.<br><i></color>]
+<color=\#0079C0>¡Hola!</color>#speaker:Nomad
+<color=\#0079C0>¿Qué puedo conseguirte?</color>#speaker:Barista
+Sorry, I'm learning. I would like a cappuccino please.#speaker:Nomad
+<color=\#0079C0>Sí, claro.</color> Yes, of course.#speaker:Barista
+How would I order that in Spanish for next time?#speaker:Nomad
+<color=\#0079C0>Me gustaría un cappuccino por favor.</color>#speaker:Barista
+<color=\#0079C0>Me gustaría un cappuccino por favor.</color>#speaker:Nomad
+<color=\#0079C0>Sí.</color> What type of milk would you like?#speaker:Barista
+* [Oat]
 ->oat
-* [Vaca.<br><i><color=\#666666>Cow.<br><i></color>]
+* [Cow]
 ->cow
-* [Almendras.<br><i><color=\#666666>Almonds.<br><i></color>]
+* [Almond]
 ->almonds
 === oat ===
-"Con leche de avena, por favor."<br><i><color=\#666666>With oat milk, please.<br><i></color>#speaker:Nomad
-"No hay problema. ¿Gustas algo de comer?"<br><i><color=\#666666>No problem. Would you like something to eat?<br><i></color>#speaker:Barista
-"No gracias, pero me gustaría un vaso con agua."<br><i><color=\#666666>No, thanks but I would like a glass of water.<br><i></color>#speaker:Nomad
-"Son 2.5 euros por favor. Pagas con efectivo o con tarjeta?"<br><i><color=\#666666>It’s 2.5 euros please. Are you paying by cash or card?<br><i></color>#speaker:Barista
-"Con tarjeta por favor."<br><i><color=\#666666>By card please.<br><i></color>#speaker:Nomad
-"Ok, puedes apoyar aquí la tarjeta. Listo, aquí tienes el café."<br><i><color=\#666666>Ok, you can place your card here. Here’s your coffee ready.<br><i></color>#speaker:Barista
--> END
+Oat milk if you have it.#speaker:Nomad
+<color=\#0079C0>¿Con leche de avena? No hay problema.</color>#speaker:Barista
+->paying
 === cow ===
-"Con leche de vaca, por favor."<br><i><color=\#666666>With cow milk, please.<br><i></color>#speaker:Nomad
-"No hay problema. ¿Gustas algo de comer?"<br><i><color=\#666666>No problem. Would you like something to eat?<br><i></color>#speaker:Barista
-"No gracias, pero me gustaría un vaso con agua."<br><i><color=\#666666>No, thanks but I would like a glass of water.<br><i></color>#speaker:Nomad
-"Son 2.5 euros por favor. Pagas con efectivo o con tarjeta?"<br><i><color=\#666666>It’s 2.5 euros please. Are you paying by cash or card?<br><i></color>#speaker:Barista
-"Con tarjeta por favor."<br><i><color=\#666666>By card please.<br><i></color>#speaker:Nomad
-"Ok, puedes apoyar aquí la tarjeta. Listo, aquí tienes el café."<br><i><color=\#666666>Ok, you can place your card here. Here’s your coffee ready.<br><i></color>#speaker:Barista
--> END
+Regular milk please.#speaker:Nomad
+<color=\#0079C0>¿Con leche de vaca? No hay problema.</color>#speaker:Barista
+->paying
 === almonds ===
-"Con leche de almendras, por favor."<br><i><color=\#666666>With almond milk, please.<br><i></color>#speaker:Nomad
-"No hay problema. ¿Gustas algo de comer?"<br><i><color=\#666666>No problem. Would you like something to eat?<br><i></color>#speaker:Barista
-"No gracias, pero me gustaría un vaso con agua."<br><i><color=\#666666>No, thanks but I would like a glass of water.<br><i></color>#speaker:Nomad
-"Son 2.5 euros por favor. Pagas con efectivo o con tarjeta?"<br><i><color=\#666666>It’s 2.5 euros please. Are you paying by cash or card?<br><i></color>#speaker:Barista
-"Con tarjeta por favor."<br><i><color=\#666666>By card please.<br><i></color>#speaker:Nomad
-"Ok, puedes apoyar aquí la tarjeta. Listo, aquí tienes el café."<br><i><color=\#666666>Ok, you can place your card here. Here’s your coffee ready.<br><i></color>#speaker:Barista
--> END
+Almond milk if possible.#speaker:Nomad
+<color=\#0079C0>¿Con leche de almendras? No hay problema.</color>#speaker:Barista
+->paying
+=== paying === 
+<color=\#0079C0>Por favor.</color>#speaker:Nomad
+Would you like something to eat?#speaker:Barista
+<color=\#0079C0>No gracias</color>, but I would like a glass of water.#speaker:Nomad
+Sure. It's 2.5 euros <color=\#0079C0>por favor</color>. Are you paying by cash or card?#speaker:Barista
+Card.#speaker:Nomad
+Ok, you can place your card here and here is your <color=\#0079C0>café</color> and <color=\#0079C0>agua</color>.#speaker:Barista
+<color=\#0079C0>¡Gracias!</color>#speaker:Nomad
+~ nomadOrderFinished = "yes"
+->END 

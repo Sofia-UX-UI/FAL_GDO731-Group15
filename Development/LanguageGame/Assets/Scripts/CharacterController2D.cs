@@ -39,13 +39,9 @@ public class CharacterController2D : MonoBehaviour
        // {
        //     return;
        // }
-    
-
         HandleHorizontalMovement();
     }
-
-
-
+    
     private void HandleHorizontalMovement()
     {
         Vector2 moveDirection = InputManager.GetInstance().GetMoveDirection();
@@ -55,9 +51,9 @@ public class CharacterController2D : MonoBehaviour
 
     public void AnimateWalk(Vector2 moveDirection)
     {
-        MoveRight = (moveDirection.x > 0.1f) ? true : false; 
+        MoveRight = (moveDirection.x > 0.001f) ? true : false; 
         animator.SetBool("WalkingRight", MoveRight); 
-        MoveLeft = (moveDirection.x < -0.1f) ? true : false; 
+        MoveLeft = (moveDirection.x < -0.001f) ? true : false; 
         animator.SetBool("WalkingLeft", MoveLeft); 
     }
 }

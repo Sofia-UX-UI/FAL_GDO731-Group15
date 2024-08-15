@@ -14,7 +14,7 @@ INCLUDE globals.ink
 ->nevermind
 === french ===
     I do really like French pastries.#speaker:Nomad
-    I'm really sorry we don't have any flights available for France would Spain be okay?<br> <i><color=\#CCCCCC>[Not available in this demo]</i></color>#speaker:Airline Agent
+    I'm really sorry we don't have any flights available for France would Spain be okay?<br> <i><color=\#CCCCCC>[France is not available in this demo]</i></color>#speaker:Airline Agent
     * [Yes]
     ->spanish
     * [No]
@@ -27,7 +27,7 @@ INCLUDE globals.ink
 === spanish === 
     I know a few words in Spanish from songs, maybe that's a good one to explore.#speaker:Nomad
     Great! We have a flight leaving for Valencia shortly. Would you like a ticket there? #speaker:Airline Agent
-    Perfect! I've always wanted to visit The City of Arts and Sciences there.#speaker:Nomad
+    Perfect! I've always wanted to visit Spain.#speaker:Nomad
     Sure, here is your ticket. Please head through security, you're at boarding at Gate 15.#speaker:Airline Agent
     Thank you.#speaker:Nomad
     Enjoy your trip!#speaker:Airline Agent
